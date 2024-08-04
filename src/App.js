@@ -6,6 +6,8 @@ import PatientHomepage from "./Pages/Homepages/PatientHomepage";
 import './App.css'
 import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
+import Register from "./Pages/Forms/Register";
+import Login from "./Pages/Forms/PatientSignIn";
 
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -31,6 +33,10 @@ const App = () => {
           <Route path="/patient-homepage" element={<PatientHomepage />} />
           <Route path="/about" element={<div>About Page</div>} />
           <Route path="/signout" element={<Homepage1 buttonsVisible={buttonsVisible} />} />
+          <Route path="/patient-signin" element={<Login />} />
+          <Route path="/signup" element={<Register/>} />
+          <Route path="/patienthomepage" element={<PatientHomepage />} />
+
         </Routes>
       </div>
     </Router>

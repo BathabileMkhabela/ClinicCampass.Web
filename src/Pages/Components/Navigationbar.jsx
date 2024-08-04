@@ -41,7 +41,9 @@ const Navigationbar = ({ toggleButtons }) => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/signout">SignOut</Link></li>
-                    <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+                    {location.pathname === '/' && (
+                        <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+                    )}
                 </>
             );
         } else if (location.pathname === '/landhomepage2') {
@@ -90,7 +92,9 @@ const Navigationbar = ({ toggleButtons }) => {
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/signup">SignUp</Link></li>
-                    <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+                    {location.pathname === '/' && (
+                        <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+                    )}
                 </>
             );
         }
@@ -110,6 +114,8 @@ const Navigationbar = ({ toggleButtons }) => {
 };
 
 export default Navigationbar;
+
+
 
 
 
