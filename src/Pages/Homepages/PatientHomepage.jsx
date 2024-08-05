@@ -43,7 +43,7 @@ const PatientHomepage = () => {
     };
 
     const handleBackToHomeClick = () => {
-        navigate('/'); // Navigate back to LandHomepage2
+        navigate('/landhomepage2'); // Navigate back to LandHomepage2
     };
 
     return (

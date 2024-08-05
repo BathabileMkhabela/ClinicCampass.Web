@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     background-color: #DBEBEE;
     padding: 0 20px;
     color: black;
@@ -29,7 +30,7 @@
 }
 
 .navbar-links li {
-    margin: 0 15px;
+    margin: 0 10px;
     cursor: pointer;
 }
 
@@ -134,3 +135,32 @@
   .notification-dropdown li:hover {
     background-color: #f5f5f5;
   }
+/* Toggle Button Styles */
+.toggle-buttons {
+    background: linear-gradient(45deg, #d8f6f8, #9db6b683);
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+.toggle-buttons:hover {
+    background: linear-gradient(45deg, #61ffff, #a7d9d9);
+    transform: scale(1.05);
+}
+
+.toggle-buttons:active {
+    background: linear-gradient(45deg, #61ffff, #d9a7c7);
+    transform: scale(0.98);
+}
+
+.toggle-buttons:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(105, 238, 255, 0.5);
+}
