@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigationbar from "./Pages/Components/Navigationbar";
 import LandHomepage2 from './Pages/Homepages/LandHomepage2'
 import PatientHomepage from "./Pages/Homepages/PatientHomepage";
-import './App.css'
 import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
 import Register from "./Pages/Forms/Register";
