@@ -86,7 +86,34 @@ const Navigationbar = ({ toggleButtons }) => {
                     <li><Link to="/signout">SignOut</Link></li>
                 </>
             );
-        } else {
+        }  else if (location.pathname === '/booking') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/signout">SignOut</Link></li>
+                </>
+            );
+        }
+        else if (location.pathname === '/patient-signin') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </>
+            );
+        }
+        else if (location.pathname === '/patient-homepage') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/signout">SignOut</Link></li>
+                </>
+            );
+        }
+        
+        else {
             return (
                 <>
                     <li><Link to="/">Home</Link></li>
