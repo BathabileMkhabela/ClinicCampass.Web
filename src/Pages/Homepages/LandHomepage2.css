@@ -27,7 +27,7 @@
     position: absolute;
     padding: 20px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);*/
 }
 
 .left {
@@ -44,19 +44,25 @@
 }
 
 .welcome-message h2 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size:  2.25rem;
+    margin-top: -10px;
     top: 200px;
-    color: rgb(11, 255, 255);
+    color: #ffffffbc;
+    font-weight: 700;
+    padding-bottom: 289px;
 }
 
 .welcome-message h5 {
     font-size: 2em;
     margin: 0;
+    padding-top: 200px;
 }
 
 .welcome-message p {
-    font-size: 1.2em;
+    font-size: 1rem;
     margin-top: 10px;
+    font-weight: 400;
 }
+
+
 
