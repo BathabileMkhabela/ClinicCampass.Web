@@ -5,6 +5,7 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import './Navigationbar.css';
 import logo from './Health_Icon.webp';
 
+/*Notifications on the landing page of the patient*/
 const notifications = [
     "Your blood test results will be back on the 26th of September. You can come and fetch them.",
     "Your appointment with Dr. Smith is scheduled for 10 AM tomorrow.",
@@ -17,6 +18,7 @@ const Navigationbar = ({ toggleButtons }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    /*Handleling the search when the user press enter it must navigate the clinic page*/
     const handleSearch = (e) => {
         if (e.key === 'Enter') {
             if (searchTerm.toLowerCase() === 'soshanguve clinic') {
@@ -28,10 +30,6 @@ const Navigationbar = ({ toggleButtons }) => {
     const handleNotificationClick = () => {
         setShowNotifications(!showNotifications);
     };
-
-    /*const handleSignOut = () => {
-        navigate('/signout');
-    };*/
 
     // Render different links and elements based on the current route
     const renderLinks = () => {
@@ -96,6 +94,14 @@ const Navigationbar = ({ toggleButtons }) => {
             );
         }
         else if (location.pathname === '/patient-signin') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </>
+            );
+        }
+        else if (location.pathname === '/admin-signin') {
             return (
                 <>
                     <li><Link to="/">Home</Link></li>
