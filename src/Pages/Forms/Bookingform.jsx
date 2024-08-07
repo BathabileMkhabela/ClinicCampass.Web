@@ -135,7 +135,7 @@ const Bookingform = () => {
                         <input type="email" id="email" name="email" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="date">Date</label>
+                        <label htmlFor="date"></label>
                         <select id="date" name="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} required>
                             <option value="">Select Date</option>
                             {availableDates.map((date) => (
@@ -144,7 +144,7 @@ const Bookingform = () => {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="doctor">Doctor</label>
+                        <label htmlFor="doctor"></label>
                         <select id="doctor" name="doctor" value={selectedDoctor} onChange={e => setSelectedDoctor(e.target.value)} required>
                             <option value="">Select Doctor</option>
                             {doctors.map((doctor) => (
@@ -154,7 +154,7 @@ const Bookingform = () => {
                     </div>
                     {selectedDate && selectedDoctor && (
                         <div className="form-group">
-                            <label htmlFor="timeSlot">Time Slot</label>
+                            <label htmlFor="timeSlot"></label>
                             <select id="timeSlot" name="timeSlot" required>
                                 <option value="">Select Time Slot</option>
                                 {availableSlots.map((slot) => (

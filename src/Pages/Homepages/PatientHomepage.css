@@ -71,16 +71,17 @@ h1 {
 
 .booking-button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1rem;
     color: white;
-    background-color: #00e1ff;
+    background-color: #1E4554;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .booking-button:hover {
-    background-color: #0056b3;
+    background-color: #00b3b3fa;
 }
 
 /* PatientHomepage.css */
@@ -103,7 +104,7 @@ h1 {
 }
 
 .back-button:hover {
-    background-color: #218838;
+    background-color: #00b3b3fa;
 }
 
 

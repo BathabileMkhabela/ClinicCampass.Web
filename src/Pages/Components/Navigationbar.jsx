@@ -29,9 +29,9 @@ const Navigationbar = ({ toggleButtons }) => {
         setShowNotifications(!showNotifications);
     };
 
-    const handleSignOut = () => {
+    /*const handleSignOut = () => {
         navigate('/signout');
-    };
+    };*/
 
     // Render different links and elements based on the current route
     const renderLinks = () => {
@@ -96,6 +96,14 @@ const Navigationbar = ({ toggleButtons }) => {
             );
         }
         else if (location.pathname === '/patient-signin') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </>
+            );
+        }
+        else if (location.pathname === '/signup') {
             return (
                 <>
                     <li><Link to="/">Home</Link></li>
