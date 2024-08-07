@@ -2,7 +2,11 @@ body {
     background-image: url(../assets/Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: var(--font-family);
   }
+h2{
+    font-size: var( --h2-fontSize);
+}
 .patientsListPage{
     font-family: var(--font-family);
    font-style: var(--fontstyle);
@@ -189,5 +193,123 @@ button{
 .btnFlex{
     display: flex;
 }
+.login_container{
+    background-color: var( --primary-color);
+    opacity: 0.90;
+    width: 500px;
+    height: 550px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius);
+}
+.login_title_container{
+    margin-left: 65px;
+}
 
-
+.Login_title h2{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 25px;
+    color: var( --white-color);
+}
+.textfield_container{
+    display: flex;
+    flex-direction: column;
+}
+.textfield_container b{
+    color: var( --white-color);
+    margin-left: 75px;
+   
+  
+}.textfield_container label{
+    margin-top: 15px;
+}
+.textfield_container input{
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 15px;
+    height: 45px;
+    border-radius: var(--border-radius);
+}
+.loginButton_comp{
+    width: 227px;
+    height: 45px;
+    padding-top: 10px;
+    font-size: var(--button-fontsize);
+    font-weight: var(--button-fontWeight);
+    background-color: var(--box-color);
+    opacity: 1;
+    border-radius: var(--border-radius);
+}
+.loginBtn_container{
+    margin-left: 120px;
+    margin-top: 25px;
+    margin-top: 50px;
+    
+}
+.admin_title{
+    margin-left: 400px;
+}
+.incoming_app_table{
+    margin-left: 65px;
+    margin-right: 65px;
+}
+.pre_check_btn{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.dashboard_btns_firstRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dashboard_btns_secondRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dashboard_nav_button{
+    width: 300px;
+    margin-top: 25px;
+    height: 45px;
+    padding-top: 15px;
+    font-size: var(--button-fontsize);
+    border-radius: var(--border-radius);
+}
+.dashboard_btns{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.log_out_button{
+    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-left: 65px;
+    width: 150px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    height: 35px;
+    border-radius: var(--border-radius);
+    padding-top: 9px;
+}
+.checkup_container{
+    background-color: var(--box-color);
+    width: 1020px;
+    height: 800px;
+    margin: auto;
+    border-radius: var(--border-radius);
+}
+.patients_personal_info_container{
+   width: 552px;
+    height: 600px;
+    border: 1px solid var(--primary-color); 
+    margin: 150px 25px 25px 25px;
+}
+.prechecking_container{
+    width: 552px;
+    height: 600px;
+    border: 1px solid var(--primary-color);
+    margin: 150px 25px 25px 25px;
+}
+.checkup_container{
+    display: flex;
+    padding: 5px;
+}
