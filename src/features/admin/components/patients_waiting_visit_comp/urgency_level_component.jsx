@@ -1,4 +1,4 @@
-import UrgencyLevelRadioBtn from "./urgency_lvl_radioBtn_comp";
+import UrgencyLevelRadioBtn from "./urgency_lvl_indicator_comp";
 export default function UrgencyLevelComp(){
     return(
         <div className="urgency_level_component">

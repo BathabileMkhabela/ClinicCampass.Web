@@ -1,5 +1,6 @@
 import PatientsListTableRowComp from "./patients_list_table_row_comp";
 import PatientListActionBtnsComp from './patient_list_actionbtn_comp';
+
 export default function PatientsListTableComp(){
     return(
         <>
@@ -15,8 +16,8 @@ export default function PatientsListTableComp(){
                 <th>Action</th>
             </tr>
           <PatientsListTableRowComp actionBtns={<PatientListActionBtnsComp/>}/>
-          <PatientsListTableRowComp/>
-          <PatientsListTableRowComp/>
+          <PatientsListTableRowComp urgLvl="urgencyLevelClassColorOld"/>
+          <PatientsListTableRowComp urgLvl="urgencyLevelClassColorNeutral"/>
           
         </table>
         </>

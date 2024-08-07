@@ -106,3 +106,27 @@ h1{
 .level3_indicator{
     background-color: var(--green-color);
 }
+.urgencyLevelClassColorCritical{
+    background-color: var(--red-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.urgencyLevelClassColorOld{
+    background-color: #EAFE00;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.urgencyLevelClassColorNeutral{
+    background-color: var(--green-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
