@@ -1,0 +1,101 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+}
+h2{
+    text-align: center;
+}
+
+#header{
+    text-align: right;
+    background-color: aliceblue;
+    height:70px
+    
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav_button{
+    margin: 10px 20px;
+}
+body{
+  background-image: url(background.jpeg);
+  background-size:cover ;
+  
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px;
+  text-align: left;
+  align-content: center;
+}
+.log-group{
+  width: 30%;
+  float: left;
+  background-color:cadetblue;
+  height: 400px;
+  align-content: center;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+.forgot-group{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.pass-group{
+
+    width: 30%;
+    float: left;
+    background-color:cadetblue;
+    height: 200px;
+    align-content: center;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+
+}
+#about{
+  display: flex;
+  flex-direction: column;
+
+
+}
+.about{
+   float: left;
+   color: whitesmoke;
+   font-size: 100px;
+   margin: 150px;
+   
+   
+}
+.history{
+    float: right;
+    color: whitesmoke;
+    width: cover;
+    justify-content: center;
+    margin:15px;
+    font-size: 25px;
+    
+    
+    
+}
+
+
