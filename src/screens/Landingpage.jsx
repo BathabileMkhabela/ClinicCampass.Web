@@ -28,8 +28,8 @@ function Landingpage() {
                 Clinic
               </div>
               <div className="form-group">
-                <button className="green-button" onClick={() => window.location.href = '/landingPage'}>View</button>
-                <button className="green-button" onClick={() => window.location.href = '/landingPage'}>Set Availability</button>
+                <button className="green-button" onClick={() => window.location.href = '/LandingPage'}>View</button>
+                <button className="green-button" onClick={() => window.location.href = '/LandingPage'}>Set Availability</button>
               </div>
             </div>
             <div className="col">
@@ -37,8 +37,8 @@ function Landingpage() {
                 Clinic
               </div>
               <div className="form-group">
-                <button className="green-button" onClick={() => window.location.href = '/landingPage'}>View</button>
-                <button className="green-button" onClick={() => window.location.href = '/landingPage'}>Set Availability</button>
+                <button className="green-button" onClick={() => window.location.href = '/LandingPage'}>View</button>
+                <button className="green-button" onClick={() => window.location.href = '/LandingPage'}>Set Availability</button>
               </div>
             </div>
             <div className="col">
@@ -46,8 +46,8 @@ function Landingpage() {
                 Clinic
               </div>
               <div className="form-group">
-                <button className="green-button" onClick={() => window.location.href = '/landingPage'}>View</button>
-              <br/>  <button className="green-button" onClick={() => window.location.href = '/landingPage'}>Set Availability</button>
+                <button className="green-button" onClick={() => window.location.href = '/LandingPage'}>View</button>
+              <br/>  <button className="green-button" onClick={() => window.location.href = 'LandingPage'}>Set Availability</button>
               </div>
             </div>
           </div>

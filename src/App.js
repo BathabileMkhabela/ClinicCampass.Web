@@ -4,6 +4,8 @@ import Register from './screens/Register';
 import Login from './screens/Login'
 import Forgotp from './screens/Forgotp';
 import Landingpage from './screens/Landingpage';
+import Doctorslogin from './screens/Doctorslogin';
+
 
 
 
@@ -19,7 +21,8 @@ function App() {
         <Route exact path='/' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/Forgotp' element={<Forgotp />} />
-        <Route exact path='/landingPage' element={<Landingpage />} />
+        <Route exact path='/LandingPage' element={<Landingpage />} />
+        <Route exact path='/Doctorslogin' element={<Doctorslogin />} />
        
       </Routes>
     </Router>
