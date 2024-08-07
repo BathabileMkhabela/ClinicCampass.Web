@@ -1,45 +1,28 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigationbar from "./Pages/Components/Navigationbar";
-import LandHomepage2 from './Pages/Homepages/LandHomepage2'
-import PatientHomepage from "./Pages/Homepages/PatientHomepage";
-import Bookingform from "./Pages/Forms/Bookingform";
-import Homepage1 from "./Pages/Homepages/Homepage1";
-import Register from "./Pages/Forms/Register";
-import Login from "./Pages/Forms/PatientSignIn";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const App = () => {
-  const [buttonsVisible, setButtonsVisible] = useState(false);
+import Register from './screens/Register';
+import Login from './screens/Login';
+import AddDoc from './screens/AddDoc';
+import CreateP from './screens/CreateP';
+import ConfirmBooking from './screens/ConfirmBooking';
+import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ClinicReg from './screens/ClinicReg';
+import RegDone from './screens/RegDone';
 
-
-  const toggleButtons = () => {
-    setButtonsVisible(!buttonsVisible);
-  };
-
-  
+function App() {
   return (
     <Router>
-      <div className="App">
-        <Navigationbar 
-           toggleButtons={toggleButtons}
-        />
-        <Routes>
-          <Route path="/" element={<Homepage1 buttonsVisible={buttonsVisible} />} />
-          <Route path="/landhomepage2" element={<LandHomepage2 />} />
-          <Route path="/home" element={<LandHomepage2 />} />
-          <Route path="/search" element={<PatientHomepage />} />
-          <Route path="/booking" element={<Bookingform />} />
-          <Route path="/patient-homepage" element={<PatientHomepage />} />
-          <Route path="/about" element={<div>About Page</div>} />
-          <Route path="/signout" element={<Homepage1 buttonsVisible={buttonsVisible} />} />
-          <Route path="/patient-signin" element={<Login />} />
-          <Route path="/signup" element={<Register/>} />
-          <Route path="/patienthomepage" element={<PatientHomepage />} />
-
-        </Routes>
-      </div>
+      <Routes>
+        <Route exact path='/' element={<Register />} />
+        <Route exact path='/login' element={<Login />} />
+        <Route exact path='/addDoc' element={<AddDoc />} />
+        <Route exact path='/createPassword' element={<CreateP/>} />
+        <Route exact path= '/confirmBooking' element={<ConfirmBooking/>} />
+        <Route exact path='/clinicReg' element={<ClinicReg/>} />
+        <Route exact path='/regDone' element={<RegDone/>} />
+      </Routes>
     </Router>
   );
 }
-
 export default App;
