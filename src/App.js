@@ -1,22 +1,16 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigationbar from "./Pages/Components/Navigationbar";
-import LandHomepage2 from './Pages/Homepages/LandHomepage2'
-import PatientHomepage from "./Pages/Homepages/PatientHomepage";
-import Bookingform from "./Pages/Forms/Bookingform";
-import Homepage1 from "./Pages/Homepages/Homepage1";
-import Register from "./Pages/Forms/Register";
-import Login from "./Pages/Forms/PatientSignIn";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const App = () => {
-  const [buttonsVisible, setButtonsVisible] = useState(false);
+import Register from './screens/Register';
+import Login from './screens/Login';
+import AddDoc from './screens/AddDoc';
+import CreateP from './screens/CreateP';
+import ConfirmBooking from './screens/ConfirmBooking';
+import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ClinicReg from './screens/ClinicReg';
+import RegDone from './screens/RegDone';
 
-
-  const toggleButtons = () => {
-    setButtonsVisible(!buttonsVisible);
-  };
-
-  
+function App() {
   return (
     <Router>
       <div className="App">
@@ -35,12 +29,10 @@ const App = () => {
           <Route path="/patient-signin" element={<Login />} />
           <Route path="/signup" element={<Register/>} />
           <Route path="/patienthomepage" element={<PatientHomepage />} />
-          <Route path="/register" element={<Register />} />
 
         </Routes>
       </div>
     </Router>
   );
 }
-
 export default App;
