@@ -7,6 +7,7 @@ import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
 import Register from "./Pages/Forms/Register";
 import Login from "./Pages/Forms/PatientSignIn";
+import AdminLogin from "./Pages/Forms/AdminLogin"
 
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/patient-signin" element={<Login />} />
           <Route path="/signup" element={<Register/>} />
           <Route path="/patienthomepage" element={<PatientHomepage />} />
+          <Route path="/admin-signin" element={<AdminLogin />} />
 
         </Routes>
       </div>
