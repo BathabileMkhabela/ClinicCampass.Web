@@ -111,6 +111,14 @@ const Navigationbar = ({ toggleButtons }) => {
                 </>
             );
         }
+        else if (location.pathname === '/register') {
+            return (
+                <>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                </>
+            );
+        }
         else if (location.pathname === '/patient-homepage') {
             return (
                 <>
