@@ -1,0 +1,108 @@
+.patientsListPage{
+    font-family: var(--font-family);
+   font-style: var(--fontstyle);
+   margin: auto;
+}
+.top-header{
+    height:136px;
+    
+    background-color: var(--secondary-color);   
+}
+.logo-container{
+    padding-top: 15px;
+}
+.patients_list_container{
+    background-color: var(--box-color);
+    height: 100vh;
+}
+h1{
+    font-size: var(--h1-fontSize);
+    font-weight: var(--h1-fontWeight);
+}
+.title_urgencyLevel_container{
+    display: flex;
+    padding-top: 25px;
+}
+.urgency_level_component{
+    padding-left: 56px;
+}
+.urgency_level_inner_comp{
+    width: 256px;
+    height: 200px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--white-color)
+}
+.urgency_level_component p{
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+}   
+.title_container{
+   margin: auto;
+}
+.patients_list_table_container{
+    height: 300px;
+    border: 1px solid var(--primary-color);
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-top: 70px;
+}
+.patients_list_table{
+    height: 300px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+}
+.patients_list_table th{
+    border: 1px solid var(--primary-color);
+    width: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+    height: 90px;
+}
+.patients_list_table td{
+    border: 1px solid black;
+}
+.table_row td{
+   text-align: center;
+}
+.patientsList_actionBtn_container .consultBtn{
+    background-color: var(--green-color);
+    width: 90px;
+    border-radius: var(--border-radius);
+}
+.patientsList_actionBtn_container .removebtn{
+    background-color: var(--red-color);
+    width: 90px;
+    border-radius: var(--border-radius);
+}
+.patientsList_actionBtn_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lvl_indicator{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+}
+.lvl_containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 50px;
+}
+.lvl_title{
+    width: 50px;
+}
+.level1_indicator{
+    background-color: var(--red-color);
+}
+.level2_indicator{
+    background-color: #EAFE00;
+}
+.level3_indicator{
+    background-color: var(--green-color);
+}
