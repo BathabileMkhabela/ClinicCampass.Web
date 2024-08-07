@@ -1,24 +1,42 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './screens/Login/Login';
-import SamplingData from './screens/SamplingData/SamplingData';
-import Level1 from './screens/Level1/Level1';
-import H2S from './screens/H2S/H2S';
-import SanitaryInpection from './screens/SanitaryInpection/SanitaryInpection';
-import DataResults from './screens/AnalysisResults/AnalysisResults';
+
+import Register from './screens/components/Register';
+import Login from './screens/components/Login'
+import Welcomer from './screens/components/welcomer';
+import AboutUs from './screens/components/AboutUs';
+
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ForgotPassword from './screens/components/ForgotPassword';
+import CreatePassword from './screens/components/CreatePassword';
+import MainWelcome from './screens/components/MainWelcome';
+// import PatientAppointList from './screens/components/PatientAppoint';
+import IncomingAppointments from './screens/components/InAppointment';
+import PreCheckup from './screens/components/PreCheckUp';
+import DoctorNurseView from './screens/components/ViewDocNurse';
+import PatientList from './screens/components/PatientList';
+import ManageDoctorNurse from './screens/components/ManageNurseDoc';
+
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<Login />} />
-        <Route exact path='/sampling_data' element={<SamplingData />} />
-        <Route exact path='/h2s_testing' element={<H2S />} />
-        <Route exact path='/level1' element={<Level1 />} />
-        <Route exact path='/sanitaryInpection' element={<SanitaryInpection />} />
-        <Route exact path='/data_results' element={<DataResults />} />
+        <Route exact path='/' element={<Welcomer />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/Sign Up' element={<Register />} />
+        <Route path='/about' element ={<AboutUs />} />
+        <Route path='/forgotPassword' element={<ForgotPassword />} />
+        <Route path='/createPassword' element={<CreatePassword />} />
+        <Route path='/mainWelcome' element={<MainWelcome />} />
+        <Route path='/inAppointment' element={<IncomingAppointments />} />
+        <Route path='/precheckup' element={<PreCheckup />} />
+        <Route path='/doctornurseview' element={<DoctorNurseView />} />
+        <Route path='/patientlist' element={<PatientList />} />
+        <Route path='/managenursedoc' element={<ManageDoctorNurse />} />
+
       </Routes>
-    </Router> 
+    </Router>
   );
 }
 export default App;
