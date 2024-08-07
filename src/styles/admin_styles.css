@@ -4,6 +4,15 @@
    margin: auto;
  
 }
+.title_cons_container{
+    position: relative;
+    margin: auto;
+}
+.pages{
+    font-family: var(--font-family);
+    font-style: var(--fontstyle);
+    margin: auto;
+}
 li{
     list-style: none;
 }
@@ -163,4 +172,17 @@ button{
     height: 25px;
     width: 25px;
 }
+.consTable{
+    margin-left: 56px;
+    margin-right: 56px;
+    background-color: var(--box-color);
+}
+.consBtn{
+    width: 150px;
+    margin-left: 56px;
+}
+.btnFlex{
+    display: flex;
+}
+
 

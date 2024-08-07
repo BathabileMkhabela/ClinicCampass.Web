@@ -9,7 +9,7 @@ import Register from "./Pages/Forms/Register";
 import Login from "./Pages/Forms/PatientSignIn";
 import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import TopHomeHeader from "./features/components/header";
-
+import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
 
@@ -26,7 +26,7 @@ const App = () => {
            toggleButtons={toggleButtons}
         /> */}
         <Routes>
-          <Route path="/" element={<PatientsWaitingConsultPage/>}/>
+          <Route path="/" element={<ConsultationRoomPage/>}/>
           {/*<Route path="/" element={<Homepage1 buttonsVisible={buttonsVisible} />} /> */}
           <Route path="/landhomepage2" element={<LandHomepage2 />} />
           <Route path="/home" element={<LandHomepage2 />} />

@@ -7,7 +7,7 @@ import BackIconComp from "./back_icon_comp";
 
 export default function BodyComponent(){
     return(
-        <div className="patients_list_container">
+        <div className="patients_list_container pages">
             <div className="title_urgencyLevel_container">
                 <UrgencyLevelComp/>
                 <div className="title_container">
