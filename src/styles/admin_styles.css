@@ -54,16 +54,15 @@ h1{
 .table_container{
     height: 250px;
     overflow-y: auto;
- 
 }
-.patients_list_table{
+.all_table{
     width: 100%;
     border: 1px solid var(--primary-color);
     overflow: scroll;
     border-collapse: collapse;
     
 }
-.patients_list_table th{
+.all_table th{
     border: 1px solid var(--primary-color);
     width: 10px;
     background-color: var(--primary-color);
@@ -75,7 +74,7 @@ h1{
     top: 0;
     
 }
-.patients_list_table td{
+.all_table td{
     border: 1px solid black;
 }
 .table_row td{
