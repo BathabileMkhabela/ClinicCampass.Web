@@ -2,6 +2,7 @@
     font-family: var(--font-family);
    font-style: var(--fontstyle);
    margin: auto;
+ 
 }
 .top-header{
     height:136px;
@@ -41,16 +42,23 @@ h1{
    margin: auto;
 }
 .patients_list_table_container{
-    height: 300px;
+   
     border: 1px solid var(--primary-color);
     margin-left: 56px;
     margin-right: 56px;
     margin-top: 70px;
 }
+.table_container{
+    height: 250px;
+    overflow-y: auto;
+ 
+}
 .patients_list_table{
-    height: 300px;
     width: 100%;
     border: 1px solid var(--primary-color);
+    overflow: scroll;
+    border-collapse: collapse;
+    
 }
 .patients_list_table th{
     border: 1px solid var(--primary-color);
@@ -59,7 +67,10 @@ h1{
     color: var(--white-color);
     font-size: var(--sub-title-fontSize);
     font-weight: var(--sub-title-fontWeight);
-    height: 90px;
+    height: 5px;
+    position: sticky;
+    top: 0;
+    
 }
 .patients_list_table td{
     border: 1px solid black;
@@ -130,3 +141,7 @@ h1{
     margin: auto;
     border: 2px solid var(--primary-color);
 }
+.table_row{
+    height: 10px;
+}
+

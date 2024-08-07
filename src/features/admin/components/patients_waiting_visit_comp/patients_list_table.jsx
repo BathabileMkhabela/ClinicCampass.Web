@@ -1,11 +1,12 @@
 import PatientsListTableRowComp from "./patients_list_table_row_comp";
 import PatientListActionBtnsComp from './patient_list_actionbtn_comp';
-
+import usePatientListRowStore from "../../states";
 export default function PatientsListTableComp(){
+    const patientsListRow = usePatientListRowStore((state)=> state.patientsListRow);
     return(
-        <>
-        <table className="patients_list_table">
-            <tr>
+        <div className="table_container">
+            <table className="patients_list_table">
+            <tr className="table_header">
                 <th>NO</th>
                 <th>Urgency Level</th>
                 <th>Name</th>
@@ -15,11 +16,12 @@ export default function PatientsListTableComp(){
                 <th>Appointment Time</th>
                 <th>Action</th>
             </tr>
-          <PatientsListTableRowComp actionBtns={<PatientListActionBtnsComp/>}/>
-          <PatientsListTableRowComp urgLvl="urgencyLevelClassColorOld"/>
-          <PatientsListTableRowComp urgLvl="urgencyLevelClassColorNeutral"/>
+          {patientsListRow}
+       
           
         </table>
-        </>
+        </div>
+        
+       
     );
 }

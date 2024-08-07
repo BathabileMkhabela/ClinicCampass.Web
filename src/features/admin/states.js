@@ -1,7 +1,10 @@
 import { create } from 'zustand'
+import PatientsListTableRowComp from './components/patients_waiting_visit_comp/patients_list_table_row_comp'
 
-
-const useUrgencyLevelStore = create((set)=>({
-    
+const usePatientListRowStore = create((set)=>({
+    patientsListRow: [<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,<PatientsListTableRowComp/>,],
+    addNewPatientOnList: ()=> set((state)=>({
+       
+    }))
 }))
-export default useUrgencyLevelStore
+export default usePatientListRowStore
