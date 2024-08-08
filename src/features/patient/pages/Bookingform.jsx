@@ -7,6 +7,7 @@ import emailjs from 'emailjs-com';
 import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { useNavigate } from 'react-router-dom';
+import { FaUser, FaPhone, FaEnvelope, FaCalendarAlt, FaStethoscope, FaClock } from 'react-icons/fa';
 
 const doctors = ["Dr. Smith", "Dr. Johnson", "Dr. Williams"];
 
@@ -63,18 +64,14 @@ const Bookingform = () => {
                         const doctor = formData.get('doctor');
                         const timeSlot = formData.get('timeSlot');
 
-                        // Remove the booked slot
                         const updatedSlots = { ...slots };
                         updatedSlots[date][doctor] = updatedSlots[date][doctor].filter(slot => slot !== timeSlot);
                         setSlots(updatedSlots);
 
-                        // Send confirmation email
                         sendEmail(name, surname, email, date, doctor, timeSlot);
 
-                        // Show success toast
                         toast.success("Your appointment has been submitted!");
 
-                        // Reset form fields
                         form.reset();
                         setSelectedDate("");
                         setSelectedDoctor("");
@@ -107,7 +104,7 @@ const Bookingform = () => {
     };
 
     const handleBack = () => {
-        navigate('/patient-homepage'); // Make sure this route is correctly defined in your router setup
+        navigate('/patient-homepage');
     };
 
     return (
@@ -119,23 +116,23 @@ const Bookingform = () => {
                 <h2>BOOK YOUR APPOINTMENT</h2>
                 <form onSubmit={handleSlotBooking}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name"><FaUser /> Name</label>
                         <input type="text" id="name" name="name" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="surname">Surname</label>
+                        <label htmlFor="surname"><FaUser /> Surname</label>
                         <input type="text" id="surname" name="surname" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="phone">Phone Number</label>
+                        <label htmlFor="phone"><FaPhone /> Phone Number</label>
                         <input type="text" id="phone" name="phone" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"><FaEnvelope /> Email</label>
                         <input type="email" id="email" name="email" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="date"></label>
+                        <label htmlFor="date"><FaCalendarAlt /> Date</label>
                         <select id="date" name="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} required>
                             <option value="">Select Date</option>
                             {availableDates.map((date) => (
@@ -144,7 +141,7 @@ const Bookingform = () => {
                         </select>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="doctor"></label>
+                        <label htmlFor="doctor"><FaStethoscope /> Doctor</label>
                         <select id="doctor" name="doctor" value={selectedDoctor} onChange={e => setSelectedDoctor(e.target.value)} required>
                             <option value="">Select Doctor</option>
                             {doctors.map((doctor) => (
@@ -154,7 +151,7 @@ const Bookingform = () => {
                     </div>
                     {selectedDate && selectedDoctor && (
                         <div className="form-group">
-                            <label htmlFor="timeSlot"></label>
+                            <label htmlFor="timeSlot"><FaClock /> Time Slot</label>
                             <select id="timeSlot" name="timeSlot" required>
                                 <option value="">Select Time Slot</option>
                                 {availableSlots.map((slot) => (
@@ -175,6 +172,7 @@ const Bookingform = () => {
 };
 
 export default Bookingform;
+
 
 
 

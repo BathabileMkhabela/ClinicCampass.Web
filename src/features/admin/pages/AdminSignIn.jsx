@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import './AdminSignIn.css';
 
-
 function AdminSignIn() {
   const users = [
     { staffNumber: '123456', password: 'Admin12?' },
@@ -18,12 +17,12 @@ function AdminSignIn() {
   const isStrongPassword = (password) => {
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return strongPasswordRegex.test(password);
-  }
+  };
 
   const isValidStaffNumber = (staffNumber) => {
     const staffNumberRegex = /^\d{6}$/;
     return staffNumberRegex.test(staffNumber);
-  }
+  };
 
   const login = () => {
     if (!isValidStaffNumber(staffNumber)) {
@@ -36,8 +35,8 @@ function AdminSignIn() {
       return;
     }
 
-    var isFound = false;
-    for (var k = 0; k < users.length; k++) {
+    let isFound = false;
+    for (let k = 0; k < users.length; k++) {
       if (users[k].staffNumber === staffNumber && users[k].password === password) {
         isFound = true;
         break;
@@ -52,7 +51,12 @@ function AdminSignIn() {
     } else {
       toast.warn('User not found');
     }
-  }
+  };
+
+  const resetPassword = () => {
+    // Navigate to the reset password page or trigger the reset password action
+    navigate('/reset-password'); // Adjust the path as necessary
+  };
 
   return (
     <div className="main_container">
@@ -78,6 +82,9 @@ function AdminSignIn() {
         </div>
         <div className="form-group">
           <button className="login-button" onClick={login}>Submit</button>
+        </div>
+        <div className="form-group">
+          <button className="reset-button" onClick={resetPassword}>Reset Password</button>
         </div>
       </div>
     </div>

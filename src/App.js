@@ -8,7 +8,7 @@ import Homepage1 from "./features/home_page/page/Homepage1";
 import Register from "./features/patient/pages/Register";
 import Login from "./features/patient/pages/PatientSignIn";
 import AdminSignIn from "./features/admin/pages/AdminSignIn"
-
+import AdminResetPassword from "./features/admin/pages/AdminResetPassword"
 
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -38,9 +38,8 @@ const App = () => {
           <Route path="/signup" element={<Register/>} />
           <Route path="/patienthomepage" element={<PatientHomepage />} />
           <Route path="/admin-signin" element={<AdminSignIn />} />
-
-          
-
+          <Route path="/reset-password" element={<AdminResetPassword />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </Router>

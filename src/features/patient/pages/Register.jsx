@@ -70,7 +70,7 @@ function Register() {
       <div className='content'>
         {step === 1 ? (
           <>
-            <h2>Patient Registering Form</h2>
+            <h2>Patient's Registering Form</h2>
             <div className='reg-form'>
               <h3>Patient's Information</h3>
               <div className="form-group">
@@ -90,7 +90,7 @@ function Register() {
               </div>
             </div>
             <div className='kin-form'>
-              <h4>Next of Kin's Information</h4>
+              <h3>Next of Kin's Information</h3>
               <div className='form-group'>
                 <input placeholder="Name" type="text" onChange={(event) => setKinName(event.target.value)} className="control-form" />
               </div>
@@ -101,7 +101,7 @@ function Register() {
                 <input placeholder="Contact" type="text" onChange={(event) => setKinContact(event.target.value)} className="control-form" />
               </div>
               <div className="form-group">
-                <button onClick={handleNext}>Next</button>
+                <button className="back-button" onClick={handleNext}>Next</button>
               </div>
             </div>
           </>

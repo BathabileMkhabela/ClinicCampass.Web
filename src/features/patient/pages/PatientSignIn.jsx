@@ -1,48 +1,94 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate, Link } from 'react-router-dom';
 import './PatientSignIn.css';
 
-const Login = () => {
-  const [idNumber, setIdNumber] = useState('');
+function AdminSignIn() {
+  const users = [
+    { idNumber: '9902250601408', password: 'Admin12?' },
+    { idNumber: '9902250601408', password: 'Prince12?' }
+  ];
+
+  const [idNumber, setStaffNumber] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Dummy validation logic; replace with real authentication
-    if (idNumber === '1234567890' && password === 'password') {
-      navigate('/landhomepage2');
-    } else {
-      setError('ID number or password is incorrect');
+  const isStrongPassword = (password) => {
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return strongPasswordRegex.test(password);
+  }
+
+  const isValidStaffNumber = (idNumber) => {
+    const staffNumberRegex = /^\d{13}$/;
+    return staffNumberRegex.test(idNumber);
+  }
+
+  const login = () => {
+    if (!isValidStaffNumber(idNumber)) {
+      toast.warn('ID number must be exactly 13 digits.');
+      return;
     }
-  };
+
+    if (!isStrongPassword(password)) {
+      toast.warn('Password is not strong enough. It must be at least 8 characters long and include uppercase, lowercase, numeric, and special characters.');
+      return;
+    }
+
+    var isFound = false;
+    for (var k = 0; k < users.length; k++) {
+      if (users[k].idNumber === idNumber && users[k].password === password) {
+        isFound = true;
+        break;
+      }
+    }
+
+    if (isFound) {
+      toast.success('Login successfully');
+      setTimeout(() => {
+        navigate('/landhomepage2');
+      }, 2000); // Wait for 2 seconds before navigating
+    } else {
+      toast.warn('User not found');
+    }
+  }
 
   return (
-    <div className="login-container">
-      <h2>Patient Login</h2>
-      {error && <p className="error-message">{error}</p>}
-      <div className="login-form">
-        <input
-          type="text"
-          placeholder="ID Number"
-          value={idNumber}
-          onChange={(e) => setIdNumber(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button onClick={handleLogin}>Login</button>
-        <div className="login-links">
-          <Link to="/forgot-password">Forgot Password?</Link>
-          <Link to="/register">Sign Up</Link>
+    <div className="main_container">
+      <ToastContainer />
+      <div className="reg-formP">
+        <h2>Patient Login</h2>
+        <div className="form-group">
+          <label>ID Number</label><br />
+          <input
+            type="text"
+            maxLength="13"
+            onChange={(event) => setStaffNumber(event.target.value)}
+            className="control-form large-input"
+          />
+        </div>
+        <div className="form-group">
+          <label>Password</label><br />
+          <input
+            type="password"
+            onChange={(event) => setPassword(event.target.value)}
+            className="control-form large-input"
+          />
+        </div>
+        <div className="form-group">
+          <button className="login-button" onClick={login}>Submit</button>
+        </div>
+        <div className="form-group">
+          <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
+        </div>
+        <div className="form-group">
+          <p>Don't have an account? <Link to="/register" className="sign-up-link">Sign Up</Link></p>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Login;
+export default AdminSignIn;
+
 
