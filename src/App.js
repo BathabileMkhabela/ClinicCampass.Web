@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navigationbar from "./Pages/Components/Navigationbar";
-import LandHomepage2 from './Pages/Homepages/LandHomepage2'
-import PatientHomepage from "./Pages/Homepages/PatientHomepage";
-import Bookingform from "./Pages/Forms/Bookingform";
-import Homepage1 from "./Pages/Homepages/Homepage1";
-import Register from "./Pages/Forms/Register";
-import Login from "./Pages/Forms/PatientSignIn";
-import AdminSignIn from "./Pages/Forms/AdminSignIn"
+import Navigationbar from "./features/main components/Navigationbar";
+import LandHomepage2 from './features/patient/pages/LandHomepage2'
+import PatientHomepage from "./features/patient/pages/PatientHomepage";
+import Bookingform from "./features/patient/pages/Bookingform";
+import Homepage1 from "./features/home_page/page/Homepage1";
+import Register from "./features/patient/pages/Register";
+import Login from "./features/patient/pages/PatientSignIn";
+import AdminSignIn from "./features/admin/pages/AdminSignIn"
 
 
 const App = () => {

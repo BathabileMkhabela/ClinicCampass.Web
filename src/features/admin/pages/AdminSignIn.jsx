@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import "./AdminSignIn.css";
+import './AdminSignIn.css';
 
-function Login() {
+
+function AdminSignIn() {
   const users = [
     { staffNumber: '123456', password: 'Admin12?' },
     { staffNumber: '654321', password: 'Prince12?' }
@@ -83,4 +84,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default AdminSignIn;

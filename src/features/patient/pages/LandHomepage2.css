@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-image: url('../Background.jpg');
+    background-image: url('../../../assets/admin_assets/images/Background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Ensure the background image is fixed */

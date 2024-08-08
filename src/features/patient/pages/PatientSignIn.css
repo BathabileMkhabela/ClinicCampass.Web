@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../Background.jpg'); /* Add your background image here */
+    background-image: url('../../../assets/admin_assets/images/Background.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
     animation: fadeIn 1.5s ease-in;

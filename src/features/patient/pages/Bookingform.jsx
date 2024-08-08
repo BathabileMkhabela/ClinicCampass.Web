@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './Bookingform.css';
-import doctorImage from './doctorImage.jpeg';
+import doctorImage from '../../../assets/admin_assets/images/doctorImage.jpeg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com';

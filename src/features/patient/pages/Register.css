@@ -11,10 +11,11 @@
 .kin-form {
   color: white;
   float: right;
-  height: 450px;
+  height: 590px;
   align-content: center;
   background-color: rgba(29, 97, 122, 0.7);
   border-radius: 10px;
+ 
   
 }
 
@@ -70,7 +71,7 @@ h4 {
 }
 
 body {
-  background-image: url(../Background.jpg);
+  background-image: url('../../../assets/admin_assets/images/Background.jpg');
   background-size: cover;
 }
 
