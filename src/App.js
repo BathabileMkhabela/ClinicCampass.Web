@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import ConfirmPassword from './screens/ConfirmPassword';
+import ConfirmPassword from './screens/ResetPassword';
 import Login from './screens/Login';
 import About from './screens/About';
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<ConfirmPassword/>} />
+        <Route exact path='/' element={<ResetPassword/>} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/About' element={<About />} />
         
