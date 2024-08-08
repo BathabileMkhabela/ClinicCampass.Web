@@ -1,0 +1,239 @@
+.patientsListPage{
+    font-family: var(--font-family);
+   font-style: var(--fontstyle);
+   margin: auto;
+    
+}
+.title_cons_container{
+    position: relative;
+    margin: auto;
+}
+.pages{
+    font-family: var(--font-family);
+    font-style: var(--fontstyle);
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+.top-header{
+    height:136px;
+    
+    background-color: var(--secondary-color);   
+}
+.logo-container{
+    padding-top: 15px;
+}
+.patients_list_container{
+    background-color: var(--box-color);
+    height: 100vh;
+}
+h1{
+    font-size: var(--h1-fontSize);
+    font-weight: var(--h1-fontWeight);
+}
+.title_urgencyLevel_container{
+    display: flex;
+    padding-top: 25px;
+}
+.urgency_level_component{
+    padding-left: 56px;
+}
+.urgency_level_inner_comp{
+    width: 150px;
+    height: 190px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--white-color)
+}
+.urgency_level_component p{
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+}   
+.title_container{
+   margin: auto;
+   text-align: center;
+   
+}
+.patients_list_table_container{
+   
+    border: 1px solid var(--primary-color);
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-top: 25px;
+    padding-top: 70px;
+}
+.title_container {
+    margin: auto;
+    text-align: center;
+    padding-top: 20px; /* Add padding to move content down */
+}
+.all_table{
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    overflow: scroll;
+    border-collapse: collapse;
+    
+}
+.all_table th{
+    border: 1px solid var(--primary-color);
+    width: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+    height: 5px;
+    position: sticky;
+    top: 0;
+    
+}
+.all_table td{
+    border: 1px solid black;
+}
+.table_row td{
+   text-align: center;
+}
+.patientsList_actionBtn_container .consultBtn{
+    background-color: var(--green-color);
+    width: 90px;
+    border-radius: var(--border-radius);
+}
+.patientsList_actionBtn_container .removebtn{
+    background-color: var(--red-color);
+    width: 90px;
+    border-radius: var(--border-radius);
+}
+.patientsList_actionBtn_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lvl_indicator{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+}
+.lvl_containers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 50px;
+}
+.lvl_title{
+    width: 50px;
+}
+.level1_indicator{
+    background-color: var(--red-color);
+}
+.level2_indicator{
+    background-color: #EAFE00;
+}
+.level3_indicator{
+    background-color: var(--green-color);
+}
+.urgencyLevelClassColorCritical{
+    background-color: var(--red-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.urgencyLevelClassColorOld{
+    background-color: #EAFE00;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.urgencyLevelClassColorNeutral{
+    background-color: var(--green-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid var(--primary-color);
+}
+.table_row{
+    height: 10px;
+}
+.back_btn button{
+    width: 150px;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    margin-left: 56px;
+    margin-top: 50px;
+    align-items: center;
+
+}
+button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn_icon_container img{
+    height: 25px;
+    width: 25px;
+}
+.consTable{
+    margin-left: 56px;
+    margin-right: 56px;
+    background-color: var(--box-color);
+}
+.consBtn{
+    width: 150px;
+    margin-left: 56px;
+}
+.btnFlex{
+    display: flex;
+}
+.table-container {
+    border: 1px solid var(--primary-color); /* Border around the table container */
+    margin: auto;
+    padding: 10px;
+    background-color: var(--box-color);
+    margin-top: 20px; /* Add margin to move the table down */
+}
+
+.table-container .table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders between cells do not overlap */
+}
+
+.table-container .table th {
+    border: 1px solid var(--primary-color); /* Border for header cells */
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+    height: 35px; /* Adjust height as needed */
+    text-align: center; /* Center-align text */
+}
+
+.table-container .table td {
+    border: 1px solid var(--primary-color); /* Border for data cells */
+    padding: 8px; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+}
+.sub_title
+{
+    color:white;
+}
+/*Style for the "Dashboard for header"*/
+/*
+.dashBoard
+{
+    text-align: center;
+    font-size: 20px;
+    height: 60%;
+    margin: 0;
+   
+    align-items: center; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
+}
+*/
+
+
+

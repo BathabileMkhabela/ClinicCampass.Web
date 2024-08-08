@@ -1,0 +1,29 @@
+:root{
+    --font-family: "Poppins", sans-serif;
+    --h1-fontSize: 2.875rem;
+    --h1-fontWeight: 700; 
+    --fontstyle: normal;
+    --h2-fontSize: 2.25rem;
+    --h2-fontWeight: 700;
+    --sub-title-fontSize: 1.125rem;
+    --sub-title-fontWeight: 600;
+    --sub-title-plus-fontSize: 1.25rem;
+    --sub-title-plus-fontWeight: 700;
+    --p-fontSize: 1rem;
+    --p-fontWeight: 400;
+    --button-fontsize: 1rem;
+    --button-fontWeight: 700;
+    --text-button-fontSize: 0.813rem;
+    --text-button-fontWeight: 500;
+    --primary-color: #1E4554;
+    /*Used on header*/
+    --secondary-color: #DBEBEE;
+    --box-color: #D9D9D9;
+    --red-color: #FE0000;
+    --green-color: #24FE00;
+    --white-color: #FFFDFD;
+    --orange-color: #EC9109;
+    --opacity: 0.63;
+   --border-radius: 10px;
+}
+
