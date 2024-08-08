@@ -2,7 +2,11 @@
     font-family: var(--font-family);
    font-style: var(--fontstyle);
    margin: auto;
+<<<<<<< HEAD
     
+=======
+ 
+>>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 .title_cons_container{
     position: relative;
@@ -52,8 +56,11 @@ h1{
 }   
 .title_container{
    margin: auto;
+<<<<<<< HEAD
    text-align: center;
    
+=======
+>>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 .patients_list_table_container{
    
@@ -61,12 +68,19 @@ h1{
     margin-left: 56px;
     margin-right: 56px;
     margin-top: 25px;
+<<<<<<< HEAD
     padding-top: 70px;
 }
 .title_container {
     margin: auto;
     text-align: center;
     padding-top: 20px; /* Add padding to move content down */
+=======
+}
+.table_container{
+    height: 250px;
+    overflow-y: auto;
+>>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 .all_table{
     width: 100%;
@@ -188,6 +202,7 @@ button{
 .btnFlex{
     display: flex;
 }
+<<<<<<< HEAD
 .table-container {
     border: 1px solid var(--primary-color); /* Border around the table container */
     margin: auto;
@@ -235,5 +250,7 @@ button{
 }
 */
 
+=======
+>>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 
 

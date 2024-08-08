@@ -9,6 +9,10 @@ export default function PatientsWaitingConsultPage(){
         
         
     );
+<<<<<<< HEAD
 }
 
         
+=======
+}
+>>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
