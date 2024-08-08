@@ -1,23 +1,15 @@
 {
-<<<<<<< HEAD
   "name": "clinic-campass-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
-=======
-  "name": "react-web",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.6.0",
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
+
     "emailjs-com": "^3.2.0",
     "react": "^18.3.1",
     "react-confirm-alert": "^3.0.6",
@@ -26,7 +18,7 @@
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
-=======
+
     "axios": "^1.5.0",
     "bootstrap": "^5.3.1",
     "emailjs-com": "^3.2.0",
@@ -40,19 +32,13 @@
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
-<<<<<<< HEAD
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
+
     "react-tsparticles": "^2.12.2",
     "styled-components": "^6.1.12",
     "tsparticles": "^3.5.0",
     "web-vitals": "^2.1.4",
     "zustand": "^4.5.4"
-<<<<<<< HEAD
-=======
-=======
-    "web-vitals": "^2.1.4"
->>>>>>> 86d0517fccf8a7a46eb6d160ce974c8f1a11ccfa
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
+
   },
   "scripts": {
     "start": "react-scripts start",
@@ -77,11 +63,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-=======
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
   }
 }

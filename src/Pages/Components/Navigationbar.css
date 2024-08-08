@@ -147,10 +147,6 @@
   transition: background 0.3s, transform 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-left: 10px;
-<<<<<<< HEAD
-=======
-  margin-top: 10px;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 .toggle-buttons:hover {

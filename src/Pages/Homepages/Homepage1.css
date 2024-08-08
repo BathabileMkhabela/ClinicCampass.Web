@@ -63,11 +63,7 @@
   align-items: center;
   animation: slideIn 0.5s ease-in-out;
   position: absolute;
-<<<<<<< HEAD
   bottom: 12%;
-=======
-  bottom: 0%;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 .sign-in-buttons.visible {
@@ -75,15 +71,9 @@
 }
 
 .sign-in-buttons button {
-<<<<<<< HEAD
   margin: 10px;
   padding: 15px 30px;
   font-size: 1rem;
-=======
-  margin: 18px;
-  padding: 18px 40px;
-  font-size: 1.20rem;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
   color: #000000;
   background: #a7d5db;
   border: none;

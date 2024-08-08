@@ -7,13 +7,7 @@ import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
 import Register from "./Pages/Forms/Register";
 import Login from "./Pages/Forms/PatientSignIn";
-import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
-import TopHomeHeader from "./features/components/header";
-import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 import ViewDocOrNurse from "./features/admin/pages/view_doc_or_nurse";
-
-
-import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import TopHomeHeader from "./features/components/header";
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 const App = () => {

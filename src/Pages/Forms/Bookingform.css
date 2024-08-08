@@ -1,7 +1,6 @@
 .booking-form-container {
     display: flex;
     width: 100%;
-<<<<<<< HEAD
     height: 160vh;
     overflow: hidden;
     background-color: #f0f4f8; /* Light background for better contrast */
@@ -10,34 +9,16 @@
 
 .booking-image {
     width: 60%;
-=======
-    overflow: hidden;
-    background-color: #f0f4f8; /* Light background for better contrast */
-    
-    display: flex;
-    width: 100%;
-    height: 120vh;
-    background-color: #f8f8f8;
-}
-
-.booking-image {
-    width: 50%;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
     background: #1E4554;
 }
 
 .booking-image img {
     width: 100%;
-<<<<<<< HEAD
     height: 100%;
-=======
-    height: 120%;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
     object-fit: cover;
 }
 
 .booking-form {
-<<<<<<< HEAD
     width: 50%; /* Adjusted to match the image width */
     padding: 40px;
     margin: auto; /* Center the form vertically */
@@ -79,33 +60,10 @@
     margin-top: -10px;
        
     
-=======
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-    background-color: #1e4554c7;
-    width: 50%;
-}
-
-.booking-form h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: aliceblue;
-    font-size: 2.25rem;
-    font-weight: 700;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 .form-group input,
 .form-group select {
-<<<<<<< HEAD
     width: 140%;
     padding: 12px;
     margin-top: -10px;
@@ -121,47 +79,16 @@
 .form-group select:focus {
     border-color: #1E4554; /* Blue */
     box-shadow: 0 0 8px rgba(3, 155, 229, 0.3);
-=======
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.form-group label {
-    position: absolute;
-    left: -9px;
-    top: 60%;
-    transform: translateY(-50%);
-    padding: 0 5px;
-    padding-bottom: 80px;
-    pointer-events: none;
-    transition: all 0.2s ease-out;
-    font-weight: 400;
-    font-size: 18px;
-}
-
-.form-group input:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group select:focus + label,
-.form-group select:not(:placeholder-shown) + label {
-    color: transparent;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 .form-buttons {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
     margin-top: 30px;
-=======
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 .back-button,
 .submit-button {
-<<<<<<< HEAD
     padding: 12px 24px;
     font-size: 1em;
     color: #ffffff; /* White text for buttons */
@@ -189,29 +116,7 @@
 .submit-button:hover {
     background-color: #004d40; /* Darker teal */
     transform: scale(1.05);
-=======
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.back-button {
-    background-color: #6c757d;
-}
-
-.back-button:hover,
-.submit-button:hover {
-    opacity: 0.9;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 }
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689

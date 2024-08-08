@@ -23,6 +23,30 @@
         "Status":"Availiable",
         "Action":""
 
+    },
+    {
+        "Room No":"03",
+        "Name":"Benny",
+        "Surname":"Mayengani",
+        "Cell Number":"011 444 8230",
+        "Appointment Date/Time":"30/08/2024 10:55",
+        "Speciality":"Public Health",
+        "Designation":"Doctor",
+        "Status":"Availiable",
+        "Action":""
+
+    },
+    {
+        "Room No":"04",
+        "Name":"Somizi",
+        "Surname":"Mhlondo",
+        "Cell Number":"066 446 4839",
+        "Appointment Date/Time":"31/08/2024 09:00",
+        "Speciality":"Dentist",
+        "Designation":"Doctor",
+        "Status":"Availiable",
+        "Action":""
+
     }
 
 ]

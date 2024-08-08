@@ -5,10 +5,6 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import './Navigationbar.css';
 import logo from './Health_Icon.webp';
 
-<<<<<<< HEAD
-=======
-/*Notifications on the landing page of the patient*/
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 const notifications = [
     "Your blood test results will be back on the 26th of September. You can come and fetch them.",
     "Your appointment with Dr. Smith is scheduled for 10 AM tomorrow.",
@@ -21,10 +17,6 @@ const Navigationbar = ({ toggleButtons }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
-<<<<<<< HEAD
-=======
-    /*Handleling the search when the user press enter it must navigate the clinic page*/
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
     const handleSearch = (e) => {
         if (e.key === 'Enter') {
             if (searchTerm.toLowerCase() === 'soshanguve clinic') {
@@ -37,13 +29,10 @@ const Navigationbar = ({ toggleButtons }) => {
         setShowNotifications(!showNotifications);
     };
 
-<<<<<<< HEAD
     /*const handleSignOut = () => {
         navigate('/signout');
     };*/
 
-=======
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
     // Render different links and elements based on the current route
     const renderLinks = () => {
         if (location.pathname === '/home') {
@@ -114,17 +103,6 @@ const Navigationbar = ({ toggleButtons }) => {
                 </>
             );
         }
-<<<<<<< HEAD
-=======
-        else if (location.pathname === '/admin-signin') {
-            return (
-                <>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </>
-            );
-        }
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
         else if (location.pathname === '/signup') {
             return (
                 <>
@@ -133,17 +111,6 @@ const Navigationbar = ({ toggleButtons }) => {
                 </>
             );
         }
-<<<<<<< HEAD
-=======
-        else if (location.pathname === '/register') {
-            return (
-                <>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                </>
-            );
-        }
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
         else if (location.pathname === '/patient-homepage') {
             return (
                 <>
