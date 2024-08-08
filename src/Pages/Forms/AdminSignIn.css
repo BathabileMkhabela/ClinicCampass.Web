@@ -1,0 +1,64 @@
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    background-image: url('../Background.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1.5s ease-in;
+}
+h2{
+    text-align: center;
+    height: 60px;
+    
+}
+
+.submit-button{
+    margin-top: 20px;
+}
+
+
+
+body {
+
+   background-image: url('../Background.jpg'); 
+   background-size: cover;
+   display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+}
+
+.reg-form{
+    background: #1e455494;
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: slideIn 0.5s ease-in;
+}
+
+.login-button {
+    background-color: rgba(30, 69, 84, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin-top if you need some space */
+  }
+
+.login-button:hover {
+  background-color: rgba(30, 69, 84, 1); /* Darken the button on hover */
+}
+
+.large-input {
+    height: 20px;
+    width: 300px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+}

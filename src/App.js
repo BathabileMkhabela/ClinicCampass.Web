@@ -7,9 +7,15 @@ import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
 import Register from "./Pages/Forms/Register";
 import Login from "./Pages/Forms/PatientSignIn";
+<<<<<<< HEAD
 import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import TopHomeHeader from "./features/components/header";
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
+=======
+import AdminSignIn from "./Pages/Forms/AdminSignIn"
+
+
+>>>>>>> 86d0517fccf8a7a46eb6d160ce974c8f1a11ccfa
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
 
@@ -38,6 +44,9 @@ const App = () => {
           <Route path="/patient-signin" element={<Login />} />
           <Route path="/signup" element={<Register/>} />
           <Route path="/patienthomepage" element={<PatientHomepage />} />
+          <Route path="/admin-signin" element={<AdminSignIn />} />
+
+          
 
         </Routes>
       </div>
