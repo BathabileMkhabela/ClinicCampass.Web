@@ -7,23 +7,15 @@ import Bookingform from "./Pages/Forms/Bookingform";
 import Homepage1 from "./Pages/Homepages/Homepage1";
 import Register from "./Pages/Forms/Register";
 import Login from "./Pages/Forms/PatientSignIn";
-<<<<<<< HEAD
 import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import TopHomeHeader from "./features/components/header";
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 import ViewDocOrNurse from "./features/admin/pages/view_doc_or_nurse";
 
-=======
-<<<<<<< HEAD
+
 import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import TopHomeHeader from "./features/components/header";
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
-=======
-import AdminSignIn from "./Pages/Forms/AdminSignIn"
-
-
->>>>>>> 86d0517fccf8a7a46eb6d160ce974c8f1a11ccfa
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
 
@@ -40,14 +32,9 @@ const App = () => {
            toggleButtons={toggleButtons}
         /> */}
         <Routes>
-<<<<<<< HEAD
           <Route path="/ConsultationPage" element={<ConsultationRoomPage/>}/>
          <Route path="/" element={<Homepage1 buttonsVisible={buttonsVisible} />} /> 
           <Route path="/ViewDocOrNurse" element={<ViewDocOrNurse />} />
-=======
-          <Route path="/" element={<ConsultationRoomPage/>}/>
-          {/*<Route path="/" element={<Homepage1 buttonsVisible={buttonsVisible} />} /> */}
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
           <Route path="/landhomepage2" element={<LandHomepage2 />} />
           <Route path="/home" element={<LandHomepage2 />} />
           <Route path="/search" element={<PatientHomepage />} />
@@ -58,12 +45,6 @@ const App = () => {
           <Route path="/patient-signin" element={<Login />} />
           <Route path="/signup" element={<Register/>} />
           <Route path="/patienthomepage" element={<PatientHomepage />} />
-<<<<<<< HEAD
-=======
-          <Route path="/admin-signin" element={<AdminSignIn />} />
-
-          
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
 
         </Routes>
       </div>
@@ -71,8 +52,4 @@ const App = () => {
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 04b03598cffa28daf321e5b630fe2939d3456689
