@@ -86,7 +86,7 @@ function AdminLandPage({ patients }) {
                 <button onClick={() => window.location.href = "/precheckUp"} className="button">
                     Patient Waiting for Medication   
                 </button>
-                <button onClick={() => window.location.href = "/consultationRoom"} className="button">
+                <button onClick={() => window.location.href = "/docnursinfo"} className="button">
                     View Nurse/Doctor
                 </button>
             </div>

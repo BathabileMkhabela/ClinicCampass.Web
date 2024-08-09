@@ -11,6 +11,9 @@ import AdminSignIn from "./features/admin/pages/AdminSignIn";
 import AdminResetPassword from "./features/admin/pages/AdminResetPassword";
 import AdminLandPage from "./features/admin/pages/AdminLandPage";
 import AddPatient from "./features/admin/pages/AddPatient";
+import DocNursInfo from "./features/admin/pages/DocNursInfo"
+import Login2 from "./features/admin/pages/Login2"
+import AddDocNurse from "./features/admin/pages/AddDocNurse"
 
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -43,6 +46,11 @@ const App = () => {
           <Route path="/reset-password" element={<AdminResetPassword />} />
           <Route path="/adminlandpage" element={<AdminLandPage patients={patients} />} />
           <Route path="/addpatient" element={<AddPatient onAddPatient={handleAddPatient} />} />
+          <Route path="/docnursinfo" element={<DocNursInfo />} />
+          <Route path="/doctorinfo" element={<Login2 />} />
+          <Route path="/addnursedoc" element={<AddDocNurse />} />
+          
+          
         </Routes>
       </div>
     </Router>
