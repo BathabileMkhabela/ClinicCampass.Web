@@ -22,7 +22,7 @@ const Navigationbar = ({ toggleButtons }) => {
 
   const handleSearch = (e) => {
     if (e.key === 'Enter') {
-      if (searchTerm.toLowerCase() === 'soshanguve clinic') {
+      if (searchTerm.toLowerCase() === 'kwamhlanga clinic') {
         navigate('/search');
       }
     }
@@ -60,12 +60,12 @@ const Navigationbar = ({ toggleButtons }) => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <img src={logo} alt="Logo" className="logo" />
-        <span className="system-name">ClinicCompass</span>
+    <nav className="navbar1">
+      <div className="navbar-logo1">
+        <img src={logo} alt="Logo" className="logo1" />
+        <span className="system-name1">ClinicCompass</span>
       </div>
-      <ul className="navbar-links">
+      <ul className="navbar-links1">
         {renderLinks()}
       </ul>
     </nav>

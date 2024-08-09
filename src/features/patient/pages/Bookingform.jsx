@@ -108,30 +108,30 @@ const Bookingform = () => {
     };
 
     return (
-        <div className="booking-form-container">
-            <div className="booking-image">
+        <div className="booking-form-container1">
+            <div className="booking-image1">
                 <img src={doctorImage} alt="Doctor" />
             </div>
-            <div className="booking-form">
+            <div className="booking-form1">
                 <h2>BOOK YOUR APPOINTMENT</h2>
                 <form onSubmit={handleSlotBooking}>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="name"><FaUser /> Name</label>
                         <input type="text" id="name" name="name" required />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="surname"><FaUser /> Surname</label>
                         <input type="text" id="surname" name="surname" required />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="phone"><FaPhone /> Phone Number</label>
                         <input type="text" id="phone" name="phone" required />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="email"><FaEnvelope /> Email</label>
                         <input type="email" id="email" name="email" required />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="date"><FaCalendarAlt /> Date</label>
                         <select id="date" name="date" value={selectedDate} onChange={e => setSelectedDate(e.target.value)} required>
                             <option value="">Select Date</option>
@@ -140,7 +140,7 @@ const Bookingform = () => {
                             ))}
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group1">
                         <label htmlFor="doctor"><FaStethoscope /> Doctor</label>
                         <select id="doctor" name="doctor" value={selectedDoctor} onChange={e => setSelectedDoctor(e.target.value)} required>
                             <option value="">Select Doctor</option>
@@ -150,7 +150,7 @@ const Bookingform = () => {
                         </select>
                     </div>
                     {selectedDate && selectedDoctor && (
-                        <div className="form-group">
+                        <div className="form-group1">
                             <label htmlFor="timeSlot"><FaClock /> Time Slot</label>
                             <select id="timeSlot" name="timeSlot" required>
                                 <option value="">Select Time Slot</option>
@@ -160,9 +160,9 @@ const Bookingform = () => {
                             </select>
                         </div>
                     )}
-                    <div className="form-buttons">
-                        <button type="button" onClick={handleBack} className="back-button">Back</button>
-                        <button type="submit" className="submit-button">Submit</button>
+                    <div className="form-buttons1">
+                        <button type="button" onClick={handleBack} className="back-button1">Back</button>
+                        <button type="submit" className="submit-button1">Submit</button>
                     </div>
                 </form>
                 <ToastContainer />

@@ -65,58 +65,58 @@ function Register() {
   };
 
   return (
-    <div className='container'>
+    <div className='container1'>
       <ToastContainer />
-      <div className='content'>
+      <div className='content1'>
         {step === 1 ? (
           <>
             <h2>Patient's Registering Form</h2>
-            <div className='reg-form'>
+            <div className='reg-form2'>
               <h3>Patient's Information</h3>
-              <div className="form-group">
+              <div className="form-group3">
                 <input type="text" onChange={(event) => setFirstName(event.target.value)} className="control-form" placeholder='Name' />
               </div>
-              <div className="form-group">
+              <div className="form-group3">
                 <input placeholder="Surname" type="text" onChange={(event) => setLastName(event.target.value)} className="control-form" />
               </div>
-              <div className="form-group">
+              <div className="form-group3">
                 <input placeholder="Contact" type="text" onChange={(event) => setContact(event.target.value)} className="control-form" />
               </div>
-              <div className="form-group">
+              <div className="form-group3">
                 <input placeholder="ID Number" type="text" onChange={(event) => setId(event.target.value)} className="control-form" />
               </div>
-              <div className="form-group">
+              <div className="form-group3">
                 <input placeholder="Email" type="text" onChange={(event) => setEmail(event.target.value)} className="control-form" />
               </div>
             </div>
-            <div className='kin-form'>
+            <div className='kin-form1'>
               <h3>Next of Kin's Information</h3>
-              <div className='form-group'>
+              <div className='form-group3'>
                 <input placeholder="Name" type="text" onChange={(event) => setKinName(event.target.value)} className="control-form" />
               </div>
-              <div className='form-group'>
+              <div className='form-group3'>
                 <input placeholder="Surname" type="text" onChange={(event) => setKinSurname(event.target.value)} className="control-form" />
               </div>
-              <div className='form-group'>
+              <div className='form-group3'>
                 <input placeholder="Contact" type="text" onChange={(event) => setKinContact(event.target.value)} className="control-form" />
               </div>
-              <div className="form-group">
-                <button className="back-button" onClick={handleNext}>Next</button>
+              <div className="form-group3">
+                <button className="back-button3" onClick={handleNext}>Next</button>
               </div>
             </div>
           </>
         ) : (
-          <div className="password">
+          <div className="password1">
             <h2>Create Password</h2>
-            <div className="form-group">
+            <div className="form-group3">
               <input type="password" placeholder="Password" onChange={(event) => setPassword(event.target.value)} className="control-form" />
             </div>
-            <div className="form-group">
+            <div className="form-group3">
               <input type="password" placeholder="Confirm Password" onChange={(event) => setConfirmPassword(event.target.value)} className="control-form" />
             </div>
-            <div className="button-group">
-              <button className="back-button" onClick={handleBack}>Back</button>
-              <button className="submit-button" onClick={handleRegister}>Register</button>
+            <div className="button-group1">
+              <button className="back-button3" onClick={handleBack}>Back</button>
+              <button className="submit-button2" onClick={handleRegister}>Register</button>
             </div>
           </div>
         )}

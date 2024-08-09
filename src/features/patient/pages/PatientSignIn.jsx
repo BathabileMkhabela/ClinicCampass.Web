@@ -54,35 +54,35 @@ function AdminSignIn() {
   }
 
   return (
-    <div className="main_container">
+    <div className="main_container1">
       <ToastContainer />
-      <div className="reg-formP">
+      <div className="reg-form1">
         <h2>Patient Login</h2>
-        <div className="form-group">
+        <div className="form-group2">
           <label>ID Number</label><br />
           <input
             type="text"
             maxLength="13"
             onChange={(event) => setStaffNumber(event.target.value)}
-            className="control-form large-input"
+            className="control-form1 large-input1"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group2">
           <label>Password</label><br />
           <input
             type="password"
             onChange={(event) => setPassword(event.target.value)}
-            className="control-form large-input"
+            className="control-form1 large-input1"
           />
         </div>
-        <div className="form-group">
-          <button className="login-button" onClick={login}>Submit</button>
+        <div className="form-group2">
+          <button className="login-button1" onClick={login}>Login</button>
         </div>
-        <div className="form-group">
-          <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
+        <div className="form-group2">
+          <Link to="/forgot-password" className="forgot-password-link1">Forgot Password?</Link>
         </div>
-        <div className="form-group">
-          <p>Don't have an account? <Link to="/register" className="sign-up-link">Sign Up</Link></p>
+        <div className="form-group2">
+          <p>Don't have an account? <Link to="/register" className="sign-up-link1">Sign Up</Link></p>
         </div>
       </div>
     </div>

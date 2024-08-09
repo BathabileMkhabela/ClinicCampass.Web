@@ -47,15 +47,15 @@ const PatientHomepage = () => {
     };
 
     return (
-        <div className="screen-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div className="screen-container1" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <h1>Availability of Doctors</h1>
-            <div className='availability-section'>
+            <div className='availability-section1'>
                 {doctors.map((doctor, index) => (
-                    <div key={index} className="doctor-card">
+                    <div key={index} className="doctor-card1">
                         <h3>{doctor.specialization}</h3>
                         <p><strong>Initials:</strong> {doctor.initials}</p>
                         <p><strong>Surname:</strong> {doctor.surname}</p>
-                        <div className="availability-times">
+                        <div className="availability-times1">
                             <strong>Available Times:</strong>
                             <ul>
                                 {doctor.availableTimes.map((slot, i) => (
@@ -66,14 +66,14 @@ const PatientHomepage = () => {
                     </div>
                 ))}
             </div>
-            <div className='button-section'>
-                <div className='booking-section'>
-                    <FontAwesomeIcon icon={faCalendarCheck} className="booking-icon" />
-                    <button onClick={handleBookingClick} className="booking-button">
+            <div className='button-section1'>
+                <div className='booking-section1'>
+                    <FontAwesomeIcon icon={faCalendarCheck} className="booking-icon1" />
+                    <button onClick={handleBookingClick} className="booking-button1">
                         Book an Appointment
                     </button>
                 </div>
-                <button onClick={handleBackToHomeClick} className="back-button">
+                <button onClick={handleBackToHomeClick} className="back-button2">
                     Back to Home
                 </button>
             </div>

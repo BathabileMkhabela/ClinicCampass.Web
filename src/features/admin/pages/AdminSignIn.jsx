@@ -46,7 +46,7 @@ function AdminSignIn() {
     if (isFound) {
       toast.success('Login successfully');
       setTimeout(() => {
-        navigate('/LandingPage');
+        navigate('/adminlandpage');
       }, 2000); // Wait for 2 seconds before navigating
     } else {
       toast.warn('User not found');
@@ -59,32 +59,32 @@ function AdminSignIn() {
   };
 
   return (
-    <div className="main_container">
+    <div className="main_container2">
       <ToastContainer />
-      <div className="reg-form">
+      <div className="reg-form3">
         <h2>Admin Login</h2>
-        <div className="form-group">
+        <div className="form-group4">
           <label>Staff Number</label><br />
           <input
             type="text"
             maxLength="6"
             onChange={(event) => setStaffNumber(event.target.value)}
-            className="control-form large-input"
+            className="control-form2 large-input2"
           />
         </div>
-        <div className="form-group">
+        <div className="form-group4">
           <label>Password</label><br />
           <input
             type="password"
             onChange={(event) => setPassword(event.target.value)}
-            className="control-form large-input"
+            className="control-form2 large-input2"
           />
         </div>
-        <div className="form-group">
-          <button className="login-button" onClick={login}>Submit</button>
+        <div className="form-group4">
+          <button className="login-button2" onClick={login}>Submit</button>
         </div>
         <div className="form-group">
-          <button className="reset-button" onClick={resetPassword}>Reset Password</button>
+          <button className="reset-button1" onClick={resetPassword}>Reset Password</button>
         </div>
       </div>
     </div>

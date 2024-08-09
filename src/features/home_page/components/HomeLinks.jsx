@@ -7,7 +7,7 @@ const HomeLinks = ({ toggleButtons, location }) => (
     <li><Link to="/about">About</Link></li>
     <li><Link to="/signout">SignOut</Link></li>
     {location.pathname === '/' && (
-      <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+      <button onClick={toggleButtons} className="toggle-buttons1">Toggle Buttons</button>
     )}
   </>
 );

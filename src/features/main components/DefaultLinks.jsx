@@ -7,7 +7,7 @@ const DefaultLinks = ({ toggleButtons, location }) => (
     <li><Link to="/about">About</Link></li>
     <li><Link to="/signup">SignUp</Link></li>
     {location.pathname === '/' && (
-      <button onClick={toggleButtons} className="toggle-buttons">Toggle Buttons</button>
+      <button onClick={toggleButtons} className="toggle-buttons1">Toggle Buttons</button>
     )}
   </>
 );

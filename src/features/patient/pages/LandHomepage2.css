@@ -1,5 +1,5 @@
 /* LandHomepage2.css */
-.welcome-container {
+.welcome-container1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,27 +23,27 @@
     }
 }
 
-.welcome-message {
+.welcome-message1 {
     position: absolute;
     padding: 20px;
     color: white;
    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);*/
 }
 
-.left {
+.left1 {
     top: 20px;
     left: 20px;
     text-align: left;
 }
 
-.center {
+.center1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.welcome-message h2 {
+.welcome-message1 h2 {
     font-size:  2.25rem;
     margin-top: -18px;
     top: 200px;
@@ -52,13 +52,13 @@
     padding-bottom: 289px;
 }
 
-.welcome-message h5 {
+.welcome-message1 h5 {
     font-size: 2em;
     margin: 0;
     padding-top: 200px;
 }
 
-.welcome-message p {
+.welcome-message1 p {
     font-size: 1rem;
     margin-top: 10px;
     font-weight: 400;

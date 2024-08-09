@@ -31,12 +31,12 @@ const LandHomepage2Links = ({ searchTerm, setSearchTerm, handleSearch }) => {
           onKeyDown={handleSearch}
         />
       </div>
-      <div className="notification-container">
-        <div className="notification-icon" onClick={handleNotificationClick}>
-          <FontAwesomeIcon icon={faBell} className="bell-icon" />
+      <div className="notification-container1">
+        <div className="notification-icon1" onClick={handleNotificationClick}>
+          <FontAwesomeIcon icon={faBell} className="bell-icon1" />
         </div>
         {showNotifications && (
-          <div className="notification-dropdown">
+          <div className="notification-dropdown1">
             <ul>
               {notifications.map((notification, index) => (
                 <li key={index}>{notification}</li>

@@ -1,66 +1,69 @@
-.booking-form-container {
+.booking-form-container1 {
     display: flex;
-    justify-content: center; /* Center the form on the page */
+    justify-content: space-between; /* Distribute space evenly between image and form */
     align-items: center;
-    padding: 2rem; /* Adjusted padding for better alignment */
+    padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
+    height: 150vh; /* Full height of the viewport */
     box-sizing: border-box; /* Ensure padding is included in width/height */
-    background-image: url('../../../assets/admin_assets/images/Background.jpg');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
 }
 
-.booking-image {
+.booking-image1 {
     width: 50%;
+    height: 100%; /* Full height for the image container */
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
     padding-right: 2rem;
-    height: 107%;
-    left: 100%; /* Full height for the image container */
+    box-sizing: border-box;
 }
 
-.booking-image img {
-    width: 109%;
+.booking-image1 img {
+    width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the area */
     border-radius: 10px;
-    padding-right: 100px;
-   
-    
 }
 
-.booking-form {
+.booking-form1 {
     width: 50%;
-
-    padding: 2rem;
-    background-color: #fff;
+    background-color: #1e4554bb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 100%; /* Full height for the form container */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center form content vertically */
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
-.booking-form h2 {
+.booking-form1 h2 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
 }
 
-.form-group {
+.form-group1 {
     margin-bottom: 1rem;
 }
 
-.form-group label {
+.form-group1 label {
     font-weight: bold;
     color: #333;
     display: block;
     margin-bottom: 0.5rem;
 }
 
-.form-group input,
-.form-group select {
+.form-group1 input,
+.form-group1 select {
     width: 100%;
     padding: 0.75rem;
     border-radius: 5px;
@@ -69,33 +72,34 @@
     box-sizing: border-box;
 }
 
-.form-buttons {
+.form-buttons1 {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
 }
 
-.submit-button,
-.back-button {
+.submit-button1,
+.back-button1 {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.813rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #24FE00;
     color: white;
     transition: background-color 0.3s;
+    font-weight: 500;
 }
 
-.submit-button:hover,
-.back-button:hover {
+.submit-button1:hover,
+.back-button1:hover {
     background-color: #45a049;
 }
 
-.back-button {
-    background-color: #f44336;
+.back-button1 {
+    background-color: #FE0000;
 }
 
-.back-button:hover {
+.back-button1:hover {
     background-color: #e53935;
 }
