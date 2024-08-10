@@ -1,279 +1,215 @@
-import React, { useState } from "react";
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
-import './AngelStyle.css'; // Ensure this file exists for custom styles
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
+import { useState } from 'react';
+import './style.css';
+import { useNavigate } from 'react-router-dom';
 
-const App = () => {
-    const [doctorInfo, setDoctorInfo] = useState({
-        name: "",
-        surname: "",
-        email: "",
-        phone: "",
-    });
 
-    const [editMode, setEditMode] = useState({
-        name: false,
-        surname: false,
-        email: false,
-        phone: false,
-    });
+function AddNurse() {
+    const navigate = useNavigate();
 
-    const [loginDetails, setLoginDetails] = useState({
-        newPassword: "",
-    });
+    const [FirstName, setFirstName] = useState('');
+    const [LastName, setLastName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [PracticeNumber, setPracticeNumber] = useState('');
+    const [Contact, setContact] = useState('');
+    const [Contact2, setContact2] = useState('');
+    const [Designation, setDesignation] = useState('');
+    const [Clinic, setClinic] = useState('');
+    const [Specialty, setSpecialty] = useState('');
+    const [Room, setRoom] = useState('');
+    
+    const [errors, setErrors] = useState({});
 
-    const [adminPassword, setAdminPassword] = useState("");
-    const [showAdminPasswordDialog, setShowAdminPasswordDialog] = useState(false);
-    const [showConfirmationDialog, setShowConfirmationDialog] = useState(false);
-    const [dialogAction, setDialogAction] = useState(""); // To track the action (generate or remove)
+    function submit() {
+        const newErrors = {};
 
-    const handleDoctorInfoChange = (name, value) => {
-        setDoctorInfo(prevInfo => ({
-            ...prevInfo,
-            [name]: value,
-        }));
-    };
+        if (FirstName === '') 
+            newErrors.FirstName = 'Enter first name';
+        if (LastName === '') 
+            newErrors.LastName = 'Enter last name';
+        if (PracticeNumber === '') 
+            newErrors.PracticeNumber = Designation === 'nurse' ? 'Enter Staff Number' : 'Enter Practice Number';
+        else if (Designation === 'doctor' && !/^[0-9]{6}$/.test(PracticeNumber)) 
+            newErrors.PracticeNumber = 'Enter valid practice number';
+        else if (Designation === 'nurse' && !/^[0-9]{6}$/.test(PracticeNumber)) 
+            newErrors.PracticeNumber = 'Enter valid staff number';
+        if (Contact === '') 
+            newErrors.Contact = 'Enter your contact';
+        else if (!/^[0-9]{10}$/.test(Contact)) 
+            newErrors.Contact = 'Enter valid cell number';
+        if (Contact2 && !/^[0-9]{10}$/.test(Contact2)) 
+            newErrors.Contact2 = 'Enter valid phone number';
+        if (Email === '') 
+            newErrors.Email = 'Enter email address';
+        else if (!/\S+@\S+\.\S+/.test(Email)) 
+            newErrors.Email = 'Enter valid email address';
 
-    const handleEditClick = (field) => {
-        setEditMode(prevMode => ({
-            ...prevMode,
-            [field]: !prevMode[field],
-        }));
-    };
+        // Dropdown validations
+        if (Designation === '') 
+            newErrors.Designation = 'Select your designation';
+        if (Clinic === '') 
+            newErrors.Clinic = 'Select your clinic';
+        if (Designation === 'doctor' && Specialty === '') 
+            newErrors.Specialty = 'Select your specialty';
+        if (Designation === 'doctor' && Room === '') 
+            newErrors.Room = 'Assign a consultation room';
 
-    const handleBlur = (field) => {
-        setEditMode(prevMode => ({
-            ...prevMode,
-            [field]: false,
-        }));
-    };
+        setErrors(newErrors);
 
-    const generateNewPassword = () => {
-        if (adminPassword === "123456") {
-            const newPassword = Math.random().toString(36).slice(-8);
-            setLoginDetails({ newPassword });
-            toast.success("New password generated");
-            setAdminPassword(""); // Clear admin password field
-            setShowAdminPasswordDialog(false); // Close dialog after generation
-        } else {
-            toast.error("Incorrect admin password");
+        if (Object.keys(newErrors).length === 0) {
+            // Log the collected data to the console
+            const data = { FirstName, LastName, PracticeNumber, Contact, Email, Contact2, Designation, Clinic, Specialty, Room };
+            console.log(data);
+
+            // Proceed to the next page
+            navigate('/createPassword');
         }
-    };
-
-    const saveDoctorInfo = (event) => {
-        event.preventDefault();
-
-        toast.dismiss();
-        if (!doctorInfo.name || !doctorInfo.surname || !doctorInfo.email || !doctorInfo.phone) {
-            toast.error("All fields are required");
-            return;
-        }
-
-        toast.success("Doctor information saved");
-        // Handle saving logic here
-    };
-
-    const confirmRemoveDoctor = () => {
-        setShowConfirmationDialog(true);
-    };
-
-    const handleConfirmRemove = () => {
-        setShowConfirmationDialog(false);
-        setDialogAction("remove");
-        setShowAdminPasswordDialog(true);
-    };
-
-    const removeDoctor = () => {
-        if (adminPassword === "123456") { // Admin password validation
-            toast.info("Doctor removed");
-            // Handle remove logic here
-            setShowAdminPasswordDialog(false);
-            setAdminPassword(""); // Clear admin password field
-        } else {
-            toast.error("Incorrect admin password");
-        }
-    };
-
-    const addNewDoctor = () => {
-        toast.info("Add new doctor/nurse");
-        
-    };
-
-    const goBack = () => {
-        
-        console.log("Back button clicked");
-    };
+    }
 
     return (
-        <div className="container">
+        <div className='container'>
             
-            <div className="content">
-                <div className="doctor-info-container">
-                    <h4 className="title-doctor">Doctor's Information</h4>
-                    <form onSubmit={saveDoctorInfo}>
-                        <div className="input-wrapper">
-                            <label htmlFor="name" className="input-label">Name:</label>
-                            <div className="input-group">
-                                <input
-                                    id="name"
-                                    value={doctorInfo.name}
-                                    onChange={({ target }) => handleDoctorInfoChange(target.name, target.value)}
-                                    name="name"
-                                    type="text"
-                                    className="input"
-                                    placeholder="Name"
-                                    disabled={!editMode.name}
-                                    onBlur={() => handleBlur('name')}
-                                />
-                                <button className="edit-button" type="button" onClick={() => handleEditClick('name')}>
-                                    <i className="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="surname" className="input-label">Surname:</label>
-                            <div className="input-group">
-                                <input
-                                    id="surname"
-                                    value={doctorInfo.surname}
-                                    onChange={({ target }) => handleDoctorInfoChange(target.name, target.value)}
-                                    name="surname"
-                                    type="text"
-                                    className="input"
-                                    placeholder="Surname"
-                                    disabled={!editMode.surname}
-                                    onBlur={() => handleBlur('surname')}
-                                />
-                                <button className="edit-button" type="button" onClick={() => handleEditClick('surname')}>
-                                    <i className="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="email" className="input-label">Email:</label>
-                            <div className="input-group">
-                                <input
-                                    id="email"
-                                    value={doctorInfo.email}
-                                    onChange={({ target }) => handleDoctorInfoChange(target.name, target.value)}
-                                    name="email"
-                                    type="email"
-                                    className="input"
-                                    placeholder="Email"
-                                    disabled={!editMode.email}
-                                    onBlur={() => handleBlur('email')}
-                                />
-                                <button className="edit-button" type="button" onClick={() => handleEditClick('email')}>
-                                    <i className="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="input-wrapper">
-                            <label htmlFor="phone" className="input-label">Phone Number:</label>
-                            <div className="input-group">
-                                <input
-                                    id="phone"
-                                    value={doctorInfo.phone}
-                                    onChange={({ target }) => handleDoctorInfoChange(target.name, target.value)}
-                                    name="phone"
-                                    type="text"
-                                    className="input"
-                                    placeholder="Phone Number"
-                                    disabled={!editMode.phone}
-                                    onBlur={() => handleBlur('phone')}
-                                />
-                                <button className="edit-button" type="button" onClick={() => handleEditClick('phone')}>
-                                    <i className="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="button-group">
-                            <button type="submit" className="save-button">Save</button>
-                        </div>
-                    </form>
+            <div className='content'>
+                <h1>Register new Nurse/Doctor</h1>
+                <div className='clinic-dropdown'>
+                    <select 
+                        className='dropdown' 
+                        value={Clinic}
+                        onChange={(event) => setClinic(event.target.value)}
+                    >
+                        <option value="">Choose your clinic</option>
+                        <option value="clinic1">KwaMhlanga Clinic</option>
+                        <option value="clinic2">Kwaggafontein Clinic</option>
+                    </select>
+                    {errors.Clinic && <p className="error-message">{errors.Clinic}</p>}
                 </div>
-                <div className="login-details-container">
-                    <h4 className="title">Login Details</h4>
-                    <div className="input-group">
-                        <button type="button" onClick={() => { setDialogAction("generate"); setShowAdminPasswordDialog(true); }} className="generate-password-button">Generate New Temporary Password</button>
+
+                <div className='personal-form'>
+                    <h3>Personal Information</h3>
+
+                    <div className="form-group">
+                        <select
+                            className='dropdown'
+                            value={Designation}
+                            onChange={(event) => setDesignation(event.target.value)}
+                        >
+                            <option value="">Designation</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="nurse">Nurse</option>
+                        </select>
+                        {errors.Designation && <p className="error-message">{errors.Designation}</p>}
                     </div>
-                    {loginDetails.newPassword && (
-                        <div className="new-password-display">
-                            <p>New Password: <strong>{loginDetails.newPassword}</strong></p>
+
+                    <div className="form-group">
+                        <input
+                            type="text"
+                            value={FirstName}
+                            onChange={(event) => setFirstName(event.target.value)}
+                            className="control-form"
+                            placeholder='Name'
+                        />
+                        {errors.FirstName && <p className="error-message">{errors.FirstName}</p>}
+                    </div>
+                    <div className="form-group">
+                        <input
+                            value={LastName}
+                            placeholder="Surname"
+                            type="text"
+                            onChange={(event) => setLastName(event.target.value)}
+                            className="control-form"
+                        />
+                        {errors.LastName && <p className="error-message">{errors.LastName}</p>}
+                    </div>
+                    
+                    <div className="form-group">
+                        <input
+                            value={PracticeNumber}
+                            placeholder={Designation === 'nurse' ? "Staff Number" : "Practice Number"}
+                            type="text"
+                            onChange={(event) => setPracticeNumber(event.target.value)}
+                            className="control-form"
+                        />
+                        {errors.PracticeNumber && <p className="error-message">{errors.PracticeNumber}</p>}
+                    </div>
+                    
+                    {/* Conditionally render the specialty dropdown */}
+                    {Designation === 'doctor' && (
+                        <div className='clinic-dropdown'>
+                            <select 
+                                className='dropdown'
+                                value={Specialty}
+                                onChange={(event) => setSpecialty(event.target.value)}
+                            >
+                                <option value="">Specialty</option>
+                                <option value="gp">General Practitioner (GP)</option>
+                                <option value="occ-med">Occupational Medicine Physician</option>
+                                <option value="gynecologist">Gynecologist</option>
+                                <option value="cardiologist">Cardiologist</option>
+                            </select>
+                            {errors.Specialty && <p className="error-message">{errors.Specialty}</p>}
+                        </div>
+                    )}
+                    
+                </div>
+            
+                <div className='contact-form'>
+                    <h4>Contact Details</h4>
+                    <div className="form-group">
+                        <input
+                            value={Contact}
+                            placeholder="Cell Number"
+                            type="text"
+                            onChange={(event) => setContact(event.target.value)}
+                            className="control-form"
+                        />
+                        {errors.Contact && <p className="error-message">{errors.Contact}</p>}
+                    </div>
+                    <div className="form-group">
+                        <input
+                            value={Contact2}
+                            placeholder="Cell Number2 (Optional)"
+                            type="text"
+                            onChange={(event) => setContact2(event.target.value)}
+                            className="control-form"
+                        />
+                        {errors.Contact2 && <p className="error-message">{errors.Contact2}</p>}
+                    </div>
+                    <div className="form-group">
+                        <input
+                            value={Email}
+                            placeholder="Email Address"
+                            type="text"
+                            onChange={(event) => setEmail(event.target.value)}
+                            className="control-form"
+                        />
+                        {errors.Email && <p className="error-message">{errors.Email}</p>}
+                    </div>
+                    
+                    {/* Conditionally render the room assignment dropdown */}
+                    {Designation === 'doctor' && (
+                        <div className='clinic-dropdown'>
+                            <select 
+                                className='dropdown'
+                                value={Room}
+                                onChange={(event) => setRoom(event.target.value)}
+                            >
+                                <option value="">Assign Consultation Room</option>
+                                <option value="room1">Room Number 04</option>
+                                <option value="room2">Room Number 07</option>
+                            </select>
+                            {errors.Room && <p className="error-message">{errors.Room}</p>}
                         </div>
                     )}
                 </div>
             </div>
-            <div className="bottom-buttons">
-                <button type="button" onClick={confirmRemoveDoctor} className="remove-button">
-                    <i className="fas fa-trash-alt"></i> Remove Doctor
-                </button>
-                <button type="button" onClick={addNewDoctor} className="add-button"><img src={require('./add_new_staff_icon.png')} alt="Cancel" className="close-icon" height={17}/>Add New Doctor/Nurse</button>
-                <button type="button" onClick={goBack} className="back-button">
-                    <i className="fas fa-arrow-left"></i> Back
-                </button>
+            <div className="form-group">
+                <button onClick={submit} className='reg-button'>Register</button>
             </div>
-            {showConfirmationDialog && (
-                <div className="dialog-overlay">
-                    <div className="dialog-content">
-                    <img src={require('./remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={50}/>  
-                    
-                        <h4>Are you sure you want to remove the doctor?</h4>
-                        <div className="button-group">
-                            <button type="button" onClick={handleConfirmRemove} className="submit-button">Yes</button>
-                            <button type="button" onClick={() => setShowConfirmationDialog(false)} className="cancel-button">No</button>
-                        </div>
-                    </div>
-                </div>
-            )}
-            {showAdminPasswordDialog && (
-                <div className="dialog-overlay">
-                    <div className="dialog-content">
-                        <button className="close-button" onClick={() => setShowAdminPasswordDialog(false)}>
-                        <img src={require('./cancel_dialog_button.png')} alt="Cancel" className="close-icon" height={30}/>
-                        </button>
-                        {dialogAction === "generate" ? (
-                            <>
-                                <img src={require('./admin_shield_icon.png')} alt="Cancel" className="close-icon" height={40}/>
-                                <h4> Provide Admin Password</h4>
-                                <div className="input-group">
-                                    <label>Admin Password:</label>
-                                    <input
-                                        type="password"
-                                        value={adminPassword}
-                                        onChange={({ target }) => setAdminPassword(target.value)}
-                                        placeholder="Enter Admin Password"
-                                    />
-                                </div>
-                                <div className="button-group">
-                                    <button type="button" onClick={generateNewPassword} className="generate-button">Generate</button>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <img src={require('./remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={40}/>
-                                <h4>Provide admin password to remove Doctor</h4>
-                                <div className="input-group">
-                                    <label>Admin Password:</label>
-                                    <input
-                                        type="password"
-                                        value={adminPassword}
-                                        onChange={({ target }) => setAdminPassword(target.value)}
-                                        placeholder="Enter Admin Password"
-                                    />
-                                </div>
-                                <div className="button-group">
-                                    <button type="button" onClick={removeDoctor} className="submit-button">Remove</button>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                </div>
-            )}
-            <ToastContainer />
+            <div>
+                <button className='back-button'>Back</button>
+            </div>
         </div>
     );
-};
+}
 
-export default App;
+export default AddNurse;
+

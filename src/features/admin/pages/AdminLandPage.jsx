@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";  // Import useNavigate
 import "./AdminLandPage.css";
 
 function AdminLandPage({ patients }) {
   const [rows, setRows] = useState([]);
   const [dateTime, setDateTime] = useState(new Date());
+  const navigate = useNavigate(); // Initialize the navigate function
 
   useEffect(() => {
     // Combine existing rows with new patients
@@ -21,6 +23,12 @@ function AdminLandPage({ patients }) {
 
     return () => clearInterval(timer);
   }, []);
+
+  // Handle the action button click for each row
+  const handleRowAction = (index) => {
+    // Navigate to the preCheckup page
+    navigate("/precheckUp");
+  };
 
   // Number of rows to display, adjust as needed
   const totalRows = 10;
@@ -56,6 +64,7 @@ function AdminLandPage({ patients }) {
               <th>Cell Number</th>
               <th>Appointment Date</th>
               <th>Appointment Time</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -67,6 +76,13 @@ function AdminLandPage({ patients }) {
                 <td>{row.cellNum || "N/A"}</td>
                 <td>{row.appointDate || "N/A"}</td>
                 <td>{row.appointTime || "N/A"}</td>
+                <td>
+                  {row.name && row.surname && row.cellNum && row.appointDate && row.appointTime ? (
+                    <button onClick={() => handleRowAction(index)}>Action</button>
+                  ) : (
+                    ""
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>

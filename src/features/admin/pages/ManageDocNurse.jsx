@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import './AngelStyle.css'; // Ensure this file exists for custom styles
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 import { useNavigate } from 'react-router-dom';
 
 
-const App = () => {
+const ManageDocNurse = () => {
+    const navigate = useNavigate();
 
-    const navigate = useNavigate(); // Initialize navigate
     const [doctorInfo, setDoctorInfo] = useState({
         name: "",
         surname: "",
@@ -103,28 +102,25 @@ const App = () => {
     const addNewDoctor = () => {
         toast.info("Add new doctor/nurse");
         navigate('/addnursedoc');
-        // Handle add logic here
+        
     };
 
     const goBack = () => {
-        // Implement the logic to navigate back, e.g., using history or router
-        // For example, if using react-router-dom:
-        // history.goBack();
+        
         console.log("Back button clicked");
     };
 
-    
 
     return (
-        <div className="container">
-           
-            <div className="content">
+        <div className="containerA">
+            
+            <div className="contentA">
                 <div className="doctor-info-container">
                     <h4 className="title-doctor">Doctor's Information</h4>
                     <form onSubmit={saveDoctorInfo}>
                         <div className="input-wrapper">
                             <label htmlFor="name" className="input-label">Name:</label>
-                            <div className="input-group">
+                            <div className="input-groupA">
                                 <input
                                     id="name"
                                     value={doctorInfo.name}
@@ -143,7 +139,7 @@ const App = () => {
                         </div>
                         <div className="input-wrapper">
                             <label htmlFor="surname" className="input-label">Surname:</label>
-                            <div className="input-group">
+                            <div className="input-groupA">
                                 <input
                                     id="surname"
                                     value={doctorInfo.surname}
@@ -162,7 +158,7 @@ const App = () => {
                         </div>
                         <div className="input-wrapper">
                             <label htmlFor="email" className="input-label">Email:</label>
-                            <div className="input-group">
+                            <div className="input-groupA">
                                 <input
                                     id="email"
                                     value={doctorInfo.email}
@@ -181,7 +177,7 @@ const App = () => {
                         </div>
                         <div className="input-wrapper">
                             <label htmlFor="phone" className="input-label">Phone Number:</label>
-                            <div className="input-group">
+                            <div className="input-groupA">
                                 <input
                                     id="phone"
                                     value={doctorInfo.phone}
@@ -205,7 +201,7 @@ const App = () => {
                 </div>
                 <div className="login-details-container">
                     <h4 className="title">Login Details</h4>
-                    <div className="input-group">
+                    <div className="input-groupA">
                         <button type="button" onClick={() => { setDialogAction("generate"); setShowAdminPasswordDialog(true); }} className="generate-password-button">Generate New Temporary Password</button>
                     </div>
                     {loginDetails.newPassword && (
@@ -219,7 +215,7 @@ const App = () => {
                 <button type="button" onClick={confirmRemoveDoctor} className="remove-button">
                     <i className="fas fa-trash-alt"></i> Remove Doctor
                 </button>
-                <button type="button" onClick={addNewDoctor} className="add-button">Add New Doctor/Nurse</button>
+                <button type="button" onClick={addNewDoctor} className="add-button"><img src={require('../../../assets/admin_assets/images/add_new_staff_icon.png')} alt="Cancel" className="close-icon" height={17}/>Add New Doctor/Nurse</button>
                 <button type="button" onClick={goBack} className="back-button">
                     <i className="fas fa-arrow-left"></i> Back
                 </button>
@@ -227,7 +223,8 @@ const App = () => {
             {showConfirmationDialog && (
                 <div className="dialog-overlay">
                     <div className="dialog-content">
-                    <img src={require('./remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={40}/>  
+                    <img src={require('../../../assets/admin_assets/images/remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={50}/>  
+                    
                         <h4>Are you sure you want to remove the doctor?</h4>
                         <div className="button-group">
                             <button type="button" onClick={handleConfirmRemove} className="submit-button">Yes</button>
@@ -240,12 +237,13 @@ const App = () => {
                 <div className="dialog-overlay">
                     <div className="dialog-content">
                         <button className="close-button" onClick={() => setShowAdminPasswordDialog(false)}>
-                        <img src={require('./cancel_dialog_button.png')} alt="Cancel" className="close-icon" height={40}/>
+                        <img src={require('../../../assets/admin_assets/images/cancel_dialog_button.png')} alt="Cancel" className="close-icon" height={30}/>
                         </button>
                         {dialogAction === "generate" ? (
                             <>
-                                <h4>Enter Admin Password to Generate New Password</h4>
-                                <div className="input-group">
+                                <img src={require('../../../assets/admin_assets/images/admin_shield_icon.png')} alt="Cancel" className="close-icon" height={40}/>
+                                <h4> Provide Admin Password</h4>
+                                <div className="input-groupA">
                                     <label>Admin Password:</label>
                                     <input
                                         type="password"
@@ -260,8 +258,9 @@ const App = () => {
                             </>
                         ) : (
                             <>
-                                <h4>Enter Admin Password to Remove Doctor</h4>
-                                <div className="input-group">
+                                <img src={require('../../../assets/admin_assets/images/remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={40}/>
+                                <h4>Provide admin password to remove Doctor</h4>
+                                <div className="input-groupA">
                                     <label>Admin Password:</label>
                                     <input
                                         type="password"
@@ -283,4 +282,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default ManageDocNurse;

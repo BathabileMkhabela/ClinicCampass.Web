@@ -106,6 +106,9 @@ const Bookingform = () => {
     const handleBack = () => {
         navigate('/patient-homepage');
     };
+    const handleConfirm = () => {
+        navigate('/confrm-booking');
+    };
 
     return (
         <div className="booking-form-container1">
@@ -162,7 +165,7 @@ const Bookingform = () => {
                     )}
                     <div className="form-buttons1">
                         <button type="button" onClick={handleBack} className="back-button1">Back</button>
-                        <button type="submit" className="submit-button1">Submit</button>
+                        <button type="submit" onClick={handleConfirm} className="submit-button1">Submit</button>
                     </div>
                 </form>
                 <ToastContainer />

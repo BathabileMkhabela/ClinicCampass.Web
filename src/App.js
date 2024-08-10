@@ -12,8 +12,12 @@ import AdminResetPassword from "./features/admin/pages/AdminResetPassword";
 import AdminLandPage from "./features/admin/pages/AdminLandPage";
 import AddPatient from "./features/admin/pages/AddPatient";
 import DocNursInfo from "./features/admin/pages/DocNursInfo"
-import Login2 from "./features/admin/pages/Login2"
+import ManageDocNurse from "./features/admin/pages/ManageDocNurse"
 import AddDocNurse from "./features/admin/pages/AddDocNurse"
+import ClinicReg from "./features/admin/pages/ClinicReg"
+import ConfirmBooking from "./features/patient/pages/ConfirmBooking"
+import RegDone from "./features/admin/pages/RegDone"
+import PreCheckup from "./features/admin/pages/PreCheckUp";
 
 const App = () => {
   const [buttonsVisible, setButtonsVisible] = useState(false);
@@ -41,15 +45,19 @@ const App = () => {
           <Route path="/about" element={<div>About Page</div>} />
           <Route path="/signout" element={<Homepage1 buttonsVisible={buttonsVisible} />} />
           <Route path="/patient-signin" element={<Login />} />
+          <Route path="/confrm-booking" element={<ConfirmBooking />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/admin-signin" element={<AdminSignIn />} />
           <Route path="/reset-password" element={<AdminResetPassword />} />
           <Route path="/adminlandpage" element={<AdminLandPage patients={patients} />} />
           <Route path="/addpatient" element={<AddPatient onAddPatient={handleAddPatient} />} />
           <Route path="/docnursinfo" element={<DocNursInfo />} />
-          <Route path="/doctorinfo" element={<Login2 />} />
+          <Route path="/doctorinfo" element={<ManageDocNurse />} />
           <Route path="/addnursedoc" element={<AddDocNurse />} />
-          
+          <Route path="/createPassword" element={<ClinicReg />} />
+          <Route path="/regDone" element={<RegDone />} />
+          <Route path="/addDoc" element={<AddDocNurse />} />
+          <Route path="/precheckUp" element={<PreCheckup />} />
           
         </Routes>
       </div>

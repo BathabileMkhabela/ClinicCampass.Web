@@ -103,3 +103,12 @@
 .back-button1:hover {
     background-color: #e53935;
 }
+/* ConfirmBooking */
+.check-image {
+    text-align: center;
+    padding: 30px;
+}
+
+.clinicReg-content h5 {
+    color: #f88d02;
+}
