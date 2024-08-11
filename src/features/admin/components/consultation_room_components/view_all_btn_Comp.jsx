@@ -1,8 +1,11 @@
-import viewIconComp from "./view_icons_comp";
+import viewAllicon from "../../../../assets/admin_assets/icons/viewAllStaff_icon.svg"
+import "../../../../styles/admin_styles.css";
+import { useNavigate } from 'react-router-dom';
 export default function ViewAllBtnComp(){
+    const navigate = useNavigate();
     return(
-        <>
-        <button type="button consBtn viewAllbtn" ><li>{viewIconComp}</li>Back</button>
-        </>
+        <div className="viewAll">
+        <button type="button" onClick={()=>navigate('/view-staff')}><img src={viewAllicon} alt="" />View Staff</button>
+        </ div>
     );
 }

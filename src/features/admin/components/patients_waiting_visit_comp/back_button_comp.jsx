@@ -5,7 +5,7 @@ export default function BackButton(){
     const navigate = useNavigate();
     return(
         <>
-            <button type="button consBtn" onClick={()=>navigate('/Admin-dashboard')}><li>{<BackIconComp/>}</li>Back</button>
+            <button type="button" onClick={()=>navigate('/Admin-dashboard')}><li>{<BackIconComp/>}</li>Back</button>
         </>
     );
 }

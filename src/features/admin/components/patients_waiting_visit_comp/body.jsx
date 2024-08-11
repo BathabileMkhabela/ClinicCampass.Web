@@ -10,9 +10,7 @@ export default function BodyComponent(){
         <div className="patients_list_container pages">
             <div className="title_urgencyLevel_container">
                 <UrgencyLevelComp/>
-                <div className="title_container">
-                    <H1titleComponent title={"Patients List"}/>
-                </div>
+                <H1titleComponent title={"Patients List"}/>
             </div>
             <div className="patients_list_table_container">
                 <PatientsListTableComp/>

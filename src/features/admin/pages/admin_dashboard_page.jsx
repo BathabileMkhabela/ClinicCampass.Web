@@ -9,9 +9,9 @@ export default function AdminDashboardPage(){
     return(
         <div className="admin_dashboard_page_container">
             <TopHomeHeader/>
-            <div className="admin_title">
-                <H1titleComponent title={"Incoming Appointments"}/>
-            </div>
+          
+            <H1titleComponent title={"Incoming Appointments"}/>
+           
         <IncomingAppointmentsTable/>
         <div className="dashboard_btns">
             <div className="dashboard_btns_firstRow">
@@ -21,7 +21,7 @@ export default function AdminDashboardPage(){
             </div>
          <div className="dashboard_btns_secondRow">
             <DashboardNavButton label={"Patients waiting for medical results"}/>
-            <DashboardNavButton label={"Consultation Room"}/>
+            <DashboardNavButton label={"Consultation Room"} navigate={()=>navigate('/consultation-room')}/>
             <DashboardNavButton label={"Reporting"}/>
         </div>
         </div>

@@ -1,7 +1,7 @@
 export default function SubTitle({subtitle}){
     return(
-        <>
-            <h2>{subtitle}</h2>
-        </>
+        <div className="subtitlePage_container">
+            <p>{subtitle}</p>
+        </div>
     );
 }

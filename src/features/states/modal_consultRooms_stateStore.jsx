@@ -6,6 +6,9 @@ const useModalConsultRoomsStore = create((set) => ({
     addConsulRoomComp: () => set((state) => ({
  
     })),
+    navigateToConsultRoom: () => set((state) => ({
+   
+    })),
   }));
   
   

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 
+
 const useOpenCloseDialogStore = create((set) => ({
   isModalOpen: false,
   modalNumber: 0,

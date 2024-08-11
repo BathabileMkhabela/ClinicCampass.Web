@@ -1,25 +1,27 @@
 import ConsultationRoomTableRows from "./consultation_room_tableRows";
-import '../../../../styles/admin_styles.css'
+import '../../../../styles/admin_styles.css';
+import usePatientListRowStore from "../../../states/states";
 export default function ConsultationRoomTable(){
+    const consultationRoomTableRows = usePatientListRowStore((state)=>state.consultationStaffRow);
     return(
-        <>
+        
         <div className="table_container consTable">
             <table className="patients_list_table all_table">
             <tr className="table_header all_table_header">
-                <th>NO</th>
-                <th>Urgency Level</th>
+                <th>Room No.</th>
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Cell Number</th>
-                <th>Appointment Date</th>
-                <th>Appointment Time</th>
-                <th>Action</th>
+                <th>Appointment Date&Time</th>
+                <th>Specialty</th>
+                <th>Designation</th>
+                <th>status</th>
             </tr>
-            <ConsultationRoomTableRows/>  <ConsultationRoomTableRows/>
+            {consultationRoomTableRows}
             
 
         </table>
         </div>
-        </>
+       
     );
 }

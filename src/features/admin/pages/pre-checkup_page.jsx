@@ -31,9 +31,9 @@ export default function PreCheckupPage(){
     return(
         <div className="precheckup_page">
             <TopHomeHeader/>
-            <div className="pre_check_title"> 
-                <H1titleComponent title={"Pre-checkup"}/>
-            </div>
+           
+            <H1titleComponent title={"Pre-checkup"}/>
+      
             <div className="checkup_container">
                 <div>
                         <PrecheckTitle title={"Patient's Information"}/>
