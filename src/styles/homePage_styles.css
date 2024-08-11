@@ -1,9 +1,14 @@
-.homePage_body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+.home_title{
+    width: 1020px;
+    margin: auto;
+   
+}
+.home_title h1{
+    color: var(--white-color);
+}
+.home_sub-title{
+    width: 1020px;
+    margin: auto;
 }
 .home_nav_btn{
     width: 300px;
@@ -15,7 +20,9 @@
     font-size: var(--button-fontsize);
     font-weight: var(--button-fontWeight);
 }
-
+.home_page_title_container{
+    margin: auto;
+}
 
 .home_buttons{
     display: flex;

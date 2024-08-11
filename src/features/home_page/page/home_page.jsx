@@ -10,7 +10,7 @@ export default function HomePage(){
     return(
         <div className="homePage">
                 <TopHomeHeader/>
-            <div className="homePage_body">
+            <div className="home_page_title_container">
                 <HomePageTitleComponent/>
                 <HomePageSubTiteComp/>
             </div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdminLoginPage from "./features/admin/pages/adminLogin_page";
 import HomePage from "./features/home_page/page/home_page";
 import PreCheckupPage from "./features/admin/pages/pre-checkup_page";
+import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 const App = () => {
  
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/Admin-login" element={<AdminLoginPage/>}/>
           <Route path="/Admin-dashboard" element={<AdminDashboardPage/>}/>
           <Route path="/Pre-checkup" element={<PreCheckupPage/>}/>
+          <Route path="/patients-list" element={<PatientsWaitingConsultPage/>}/>
         </Routes>
 
     </Router>

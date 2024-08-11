@@ -1,3 +1,4 @@
+import "../../../../styles/admin_styles.css"
 import BackIconComp from "./back_icon_comp";
 export default function BackButton({btbClicked}){
     return(
