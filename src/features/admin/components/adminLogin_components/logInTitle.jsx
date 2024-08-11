@@ -1,5 +1,4 @@
-
-import TextFieldComponent from "./textField_component";
+import "../../../../styles/admin_styles.css"
 export default function LoginTitle(){
     return(
         <div className="Login_title">

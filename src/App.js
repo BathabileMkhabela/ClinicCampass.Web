@@ -6,6 +6,7 @@ import PreCheckupPage from "./features/admin/pages/pre-checkup_page";
 import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_consultation_page";
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 import ViewStaffPage from "./features/admin/pages/view_staff_page";
+import ManageStaffPage from "./features/admin/pages/manage_staff_page";
 const App = () => {
  
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/patients-list" element={<PatientsWaitingConsultPage/>}/>
           <Route path="/consultation-room" element={<ConsultationRoomPage/>}/>
           <Route path="/view-staff" element={<ViewStaffPage/>}/>
+          <Route path="/manage-staff" element={<ManageStaffPage/>}/>
         </Routes>
 
     </Router>

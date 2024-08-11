@@ -4,10 +4,12 @@ import { create } from 'zustand';
 const useOpenCloseDialogStore = create((set) => ({
   isModalOpen: false,
   modalNumber: 0,
-  setModalConfirmCancel: () => set({ modalNumber: 1 }),
-  setModalAdminAuthPWD: () => set({ modalNumber: 2 }),
-  setModalConsultRoom: () => set({ modalNumber: 3 }),
-  setModalRemoveStuffConfirm: () => set({modalNumber: 4 }),
+  setModalRemoveStuffConfirm: () => set({
+    isModalOpen: true,
+    modalNumber: 4 }),
+    setModalGeneratetempPwd: () => set({
+      isModalOpen: true,
+      modalNumber: 5 }),
 
   toggleCancelPatientAppntModal: () => set((state) => ({
     isModalOpen: true,
