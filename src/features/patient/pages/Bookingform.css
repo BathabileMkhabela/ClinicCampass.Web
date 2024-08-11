@@ -1,0 +1,114 @@
+.booking-form-container1 {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between image and form */
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100vw; /* Full width of the viewport */
+    height: 150vh; /* Full height of the viewport */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.booking-image1 {
+    width: 50%;
+    height: 100%; /* Full height for the image container */
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally */
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.booking-image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+}
+
+.booking-form1 {
+    width: 50%;
+    background-color: #1e4554bb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Full height for the form container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center form content vertically */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.booking-form1 h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.form-group1 {
+    margin-bottom: 1rem;
+}
+
+.form-group1 label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group1 input,
+.form-group1 select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-buttons1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.submit-button1,
+.back-button1 {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.813rem;
+    cursor: pointer;
+    background-color: #24FE00;
+    color: white;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.submit-button1:hover,
+.back-button1:hover {
+    background-color: #45a049;
+}
+
+.back-button1 {
+    background-color: #FE0000;
+}
+
+.back-button1:hover {
+    background-color: #e53935;
+}
+/* ConfirmBooking */
+.check-image {
+    text-align: center;
+    padding: 30px;
+}
+
+.clinicReg-content h5 {
+    color: #f88d02;
+}
