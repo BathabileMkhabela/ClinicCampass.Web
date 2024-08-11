@@ -20,6 +20,10 @@ const useOpenCloseDialogStore = create((set) => ({
     isModalOpen: true,
     modalNumber: 2,
   })),
+  toggleToSelectConsultRoomModal: () => set((state) => ({
+    isModalOpen: true,
+    modalNumber: 3,
+  })),
 }));
 
 

@@ -124,3 +124,15 @@ body.active-modal {
 {
     margin-left: 25px;
 }
+.modal_consultRmBtn_container button{
+    width: 250px;
+    height: 35px;
+    margin: auto;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+    align-items: center;
+    font-size: var(--button-fontsize);
+    font-weight: var(--button-fontWeight);
+    background-color: var(--primary-color); 
+    color: var(--white-color);
+}

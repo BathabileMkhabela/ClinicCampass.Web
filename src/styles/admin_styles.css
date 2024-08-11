@@ -484,3 +484,8 @@ h1{
 .cancel_patient_btn_container button{
     background-color: var(--red-color);
 }
+.modal_ConsultRoom_container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 150px;
+}
