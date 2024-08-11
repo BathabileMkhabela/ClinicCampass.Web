@@ -1,6 +1,4 @@
-import PatientsListTableRowComp from "./patients_list_table_row_comp";
-import PatientListActionBtnsComp from './patient_list_actionbtn_comp';
-import usePatientListRowStore from "../../states";
+import usePatientListRowStore from "../../../states/states";
 export default function PatientsListTableComp(){
     const patientsListRow = usePatientListRowStore((state)=> state.patientsListRow);
     return(

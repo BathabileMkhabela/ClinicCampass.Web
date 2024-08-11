@@ -463,13 +463,24 @@ input#urgencyLevel1.urg_lvl_inline{
 h1{
     color: var(--white-color);
 }
-
-.urgency_level_component{
-
+.patientList_acion_row_btns_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
 }
-.urgencyLvlRadio_Container{
-
+.patientList_action_rowBtns button{
+    width: 95px;
+    height: 25px;
+    align-items: center;
+    border-radius: var(--border-radius);
+    font-size: var(--button-fontsize);
+    font-weight: var(--button-fontWeight);
+    color: var(--white-color);
 }
-.lvl_containers{
-
+.consult_btn_container button{
+    background-color: var(--green-color);
+}
+.cancel_patient_btn_container button{
+    background-color: var(--red-color);
 }

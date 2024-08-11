@@ -7,7 +7,7 @@ import PrecheckTextFieldComp from "../components/pre-check_components/precheck_t
 import UrgencyLevelRadioBtns from "../components/pre-check_components/urgency_level_radioBtn";
 import SavePrecheckInfoBtn from "../components/pre-check_components/save_pre_checkup_infoBtn";
 import CancelAppointmentButton from '../components/pre-check_components/cancel_appointment_btn';
-import Modal from "../components/pre-check_components/modal";
+import Modal from "../../components/modal/modal";
 import useOpenCloseDialogStore from "../../states/openDialogStore";
 import ModalIconComponent from "../components/pre-check_components/modal_components/modal_icon_component";
 import modalIconSrc from "../../../assets/admin_assets/icons/cancel_appnmt_dialog_icon.svg";
