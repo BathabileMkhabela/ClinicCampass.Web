@@ -1,4 +1,4 @@
-import ConsultationRoomTableRows from './consultation_room_tableRows';
+import ConsultationRoomTableRows from "./consultation_room_tableRows";
 import '../../../../styles/admin_styles.css';
 import usePatientListRowStore from "../../../states/states";
 export default function ConsultationRoomTable(){
@@ -17,7 +17,7 @@ export default function ConsultationRoomTable(){
                 <th>Designation</th>
                 <th>status</th>
             </tr>
-            {ConsultationRoomTableRows}
+            {consultationRoomTableRows}
             
 
         </table>

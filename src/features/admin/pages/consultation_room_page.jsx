@@ -3,7 +3,6 @@ import ConsultationRoomBody from "../components/consultation_room_components/con
 export default function ConsultationRoomPage(){
     return(
     <>
-       
         <ConsultationRoomBody/>
     </>
     );

@@ -48,7 +48,7 @@ const PatientHomepage = () => {
 
     return (
         <div className="screen-container1" style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <h1>Availability of Doctors</h1>
+            <h1>Doctors Availability</h1>
             <div className='availability-section1'>
                 {doctors.map((doctor, index) => (
                     <div key={index} className="doctor-card1">

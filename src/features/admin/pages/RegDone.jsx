@@ -20,7 +20,7 @@ function RegDone() {
                 </div>
 
                 <div className='verify-text'>
-                    <p>New healthcare provider profile created <br/> and active.</p>
+                    <p>New healthcare provider profile created and active.</p>
                 </div>
                 
                 <div>  

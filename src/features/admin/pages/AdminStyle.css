@@ -4,15 +4,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../../../assets/admin_assets/images/Background.jpg'); /* Add your background image here */
+    background-image: url('../../../assets/admin_assets/images/Background.jpg');
+    /* Add your background image here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #f0f4f8; /* Fallback color */
+    background-color: #f0f4f8;
+    /* Fallback color */
 }
 
-  
-  .add-patient-form {
+
+.add-patient-form {
     background: #1e4554b7;
     padding: 30px;
     border-radius: 8px;
@@ -20,14 +22,14 @@
     width: 100%;
     max-width: 500px;
     text-align: center;
-  }
-  
-  .add-patient-form h2 {
+}
+
+.add-patient-form h2 {
     margin-bottom: 20px;
     color: #ffffff;
-  }
-  
-  .input-field {
+}
+
+.input-field {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -35,45 +37,45 @@
     border-radius: 5px;
     font-size: 1rem;
     background-color: #D9D9D9;
-  }
-  
-  .button-group {
+}
+
+.button-group {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  .back-btn,
-  .submit-btn {
+}
+
+.back-btn,
+.submit-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .back-btn {
+}
+
+.back-btn {
     background-color: #1e4554b7;
     color: #fffefe;
-  }
-  
-  .back-btn:hover {
+}
+
+.back-btn:hover {
     background-color: #ccc;
     transform: scale(1.05);
-  }
-  
-  .submit-btn {
+}
+
+.submit-btn {
     background-color: #ff9d00;
     color: white;
-  }
-  
-  .submit-btn:hover {
+}
+
+.submit-btn:hover {
     background-color: #b38900;
     transform: scale(1.05);
-  }
+}
 
-  /* AdminLandPage.css */
+/* AdminLandPage.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -81,6 +83,13 @@ body {
     background: url('../../../assets/admin_assets/images/Background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+
+.clinicReg-content p,
+.regDone-content p {
+    color: #ec9718;
+    margin-right: 100px;
+}
+
 
 .adminInfo {
     display: flex;
@@ -91,34 +100,40 @@ body {
 }
 
 .admin-name {
-    font-weight: 800; 
+    font-weight: 800;
 }
 
 .clinicInfo {
-    text-align: left; /* Align text to the left */
-    color: white; /* Ensure text color is white */
+    text-align: left;
+    /* Align text to the left */
+    color: white;
+    /* Ensure text color is white */
     margin-right: 500px;
     font-weight: 500;
 }
 
 .clinicInfo p {
-    font-weight: 800; 
+    font-weight: 800;
 }
 
 .dateTime {
-    text-align: right; /* Align text to the right */
-    color: white; /* Ensure text color is white */
+    text-align: right;
+    /* Align text to the right */
+    color: white;
+    /* Ensure text color is white */
     font-weight: 500;
 }
 
 .adminInfo .admin-name {
-    color: #1E4554; /* Color for Admin text */
+    color: #1E4554;
+    /* Color for Admin text */
 }
 
 main {
     padding: 20px;
     text-align: center;
-    position: relative; /* Added for absolute positioning of buttons */
+    position: relative;
+    /* Added for absolute positioning of buttons */
 }
 
 h2 {
@@ -133,37 +148,45 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid black; /* Black border for row separators */
+    border-bottom: 1px solid black;
+    /* Black border for row separators */
 }
 
 th {
     background-color: #1E4554;
     color: white;
-    border-top: 2px solid black; /* Black border for the top of the header */
+    border-top: 2px solid black;
+    /* Black border for the top of the header */
 }
 
 td {
-    border-right: 1px solid black; /* Black border for the right of each cell */
+    border-right: 1px solid black;
+    /* Black border for the right of each cell */
 }
 
 tr:last-child td {
-    border-bottom: none; /* Remove bottom border for the last row */
+    border-bottom: none;
+    /* Remove bottom border for the last row */
 }
 
-button, .sign-btn {
+button,
+.sign-btn {
     margin: 10px;
     padding: 10px 20px;
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
-    border: 2px solid black; /* Black border for the buttons */
+    border: 2px solid black;
+    /* Black border for the buttons */
     cursor: pointer;
     border-radius: 5px;
     display: inline-block;
     font-weight: 500;
-    position: relative; /* For positioning the icon */
+    position: relative;
+    /* For positioning the icon */
 }
 
 button .icon {
@@ -171,8 +194,10 @@ button .icon {
 }
 
 .buttons-container {
-    width: 80%; /* Match the width of the table */
-    margin: 10px auto; /* Center horizontally and add vertical spacing */
+    width: 80%;
+    /* Match the width of the table */
+    margin: 10px auto;
+    /* Center horizontally and add vertical spacing */
 }
 
 .button-row {
@@ -183,15 +208,18 @@ button .icon {
 }
 
 .button-row:first-child {
-    margin-bottom: 10px; /* Space between the first row and the second row */
+    margin-bottom: 10px;
+    /* Space between the first row and the second row */
 }
 
 .button-row:nth-child(2) {
-    margin-bottom: 10px; /* Space between the second row and the third row */
+    margin-bottom: 10px;
+    /* Space between the second row and the third row */
 }
 
 .button-row:last-child {
-    margin-top: 20px; /* Space above the last row (Add Patients button) */
+    margin-top: 20px;
+    /* Space above the last row (Add Patients button) */
     display: flex;
     justify-content: space-between;
 }
@@ -219,7 +247,8 @@ button .icon {
 }
 
 .sign-btn::before {
-    content: '🔒'; /* Logout icon */
+    content: '🔒';
+    /* Logout icon */
     margin-right: 5px;
     color: #1E4554;
 }
@@ -227,10 +256,14 @@ button .icon {
 .total-appointments {
     margin-top: 20px;
     font-weight: bold;
-    color: white; /* Text color white */
-    text-align: left; /* Align text to the left */
-    width: 80%; /* Ensure it aligns properly within the container */
-    margin-left: 1%; /* Center the element horizontally within the parent container */
+    color: white;
+    /* Text color white */
+    text-align: left;
+    /* Align text to the left */
+    width: 80%;
+    /* Ensure it aligns properly within the container */
+    margin-left: 1%;
+    /* Center the element horizontally within the parent container */
 }
 
 button:hover {
@@ -244,68 +277,71 @@ button:hover {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../../../assets/admin_assets/images/Background.jpg'); /* Add your background image here */
+    background-image: url('../../../assets/admin_assets/images/Background.jpg');
+    /* Add your background image here */
     background-size: cover;
     background-position: center;
     animation: fadeIn 1.5s ease-in;
-  }
-  
-  h2 {
+}
+
+h2 {
     text-align: center;
     height: 60px;
     color: #FFF;
     margin-bottom: 20px;
-  }
-  
-  
-  .reg-form3 {
+}
+
+
+.reg-form3 {
     background: rgba(30, 69, 84, 0.7);
     padding: 50px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 450px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
     animation: slideIn 0.5s ease-in;
-  }
-  
-  .form-group2 {
+}
+
+.form-group2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  }
-  
-  .form-group2 label {
+}
+
+.form-group2 label {
     color: #FFF;
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 16px;
     display: inline-block;
-    width: 100%; /* Ensure label spans the entire width */
-  }
-  
-  label {
+    width: 100%;
+    /* Ensure label spans the entire width */
+}
+
+label {
     color: #FFF;
-  }
-  
-  .form-group2 input,
-  .form-group2 select {
+}
+
+.form-group2 input,
+.form-group2 select {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 18px;
     box-sizing: border-box;
-  }
-  
-  .large-input2 {
+}
+
+.large-input2 {
     width: 100%;
     font-size: 18px;
     padding: 12px;
     margin-bottom: 15px;
-  }
-  
-  .login-button2,
-  .reset-button1 {
+}
+
+.login-button2,
+.reset-button1 {
     background-color: rgba(30, 69, 84, 0.7);
     color: white;
     padding: 15px 25px;
@@ -315,35 +351,36 @@ button:hover {
     font-size: 18px;
     transition: background-color 0.3s ease;
     margin-top: 10px;
-    width: 53%; /* Make buttons full width */
+    width: 53%;
+    /* Make buttons full width */
     margin-left: 100px;
-  }
-  
-  .reset-button1 {
+}
+
+.reset-button1 {
     margin-left: 2px;
-  }
-  
-  .login-button2:hover,
-  .reset-button1:hover {
+}
+
+.login-button2:hover,
+.reset-button1:hover {
     background-color: #EC9109;
-  }
-  
-  .forgot-password-link1,
-  .sign-up-link1 {
+}
+
+.forgot-password-link1,
+.sign-up-link1 {
     color: #EC9109;
     text-decoration: none;
     display: block;
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
-  }
-  
-  .forgot-password-link1:hover,
-  .sign-up-link1:hover {
+}
+
+.forgot-password-link1:hover,
+.sign-up-link1:hover {
     text-decoration: underline;
-  }
-  
-  
+}
+
+
 /*DoctorNurseView.css*/
 .doctor-nurse-containerB {
     padding: 20px;
@@ -364,16 +401,19 @@ table {
     margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid black; /* Black dividing lines */
+    border-bottom: 1px solid black;
+    /* Black dividing lines */
 }
 
 th {
     background-color: #1E4554;
     color: white;
-    border-top: 2px solid black; /* Black border for the top of the header */
+    border-top: 2px solid black;
+    /* Black border for the top of the header */
 }
 
 td.status {
@@ -383,11 +423,13 @@ td.status {
 }
 
 td.status.in-progress {
-    color: orange; /* Text color for in-progress status */
+    color: orange;
+    /* Text color for in-progress status */
 }
 
 td.status.available {
-    color: green; /* Text color for available status */
+    color: green;
+    /* Text color for available status */
 }
 
 .buttonB {
@@ -399,7 +441,7 @@ td.status.available {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    background-color:#1E4554 ;
+    background-color: #1E4554;
 }
 
 .manage-button {
@@ -423,7 +465,7 @@ button:hover {
 
 .buttons-container {
     text-align: center;
-   
+
 }
 
 /*ManageDocNurse.css*/
@@ -431,14 +473,15 @@ button:hover {
     float: left;
 }
 
-#header{
+#header {
     width: 103%;
     background-color: rgb(222, 238, 243);
     height: 7vh;
     flex-wrap: wrap;
-    
+
 }
-.nav_button{
+
+.nav_button {
     margin: 10px 20px;
     color: #1E4554;
     float: right;
@@ -447,7 +490,7 @@ button:hover {
 body {
     background-image: url('../../../assets/admin_assets/images/Background.jpg');
     background-size: cover;
-    
+
 }
 
 .contentA {
@@ -462,8 +505,8 @@ body {
     align-items: center;
     height: 100vh;
     min-width: 100%;
-    
-    
+
+
 }
 
 .input {
@@ -483,85 +526,94 @@ body {
     margin-top: 10px;
     font-size: 14px;
 }
+
 /* styles.css */
 
 .submit-button:hover {
     background-color: rgb(202, 16, 81);
 }
-.title
-{
+
+.title {
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
     color: #000000;
 
 }
-.title-doctor
-{
+
+.title-doctor {
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
     color: #ffffff;
 
 }
+
 .search-bar-container {
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
-.nav_button
-{
-    text-decoration:wavy;
+
+.nav_button {
+    text-decoration: wavy;
     color: #130d0d;
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+
 .search-bar {
     padding: 5px 10px;
     margin: 0 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     transition: border-color 0.3s ease;
-    flex: 1; /* Allows search bar to grow */
+    flex: 1;
+    /* Allows search bar to grow */
 }
 
 .search-bar:focus {
     border-color: #007bff;
     outline: none;
 }
-.nav_button:hover
-{
+
+.nav_button:hover {
     border-color: #ddd;
 }
-.mission-title
-{
+
+.mission-title {
     font-size: 55px;
     font-family: 'Georgia', sans-serif;
 }
-.mission-description
-{
+
+.mission-description {
     font-family: 'Georgia', sans-serif;
     font-size: 25px;
 
 }
-.mission-goals
-{
+
+.mission-goals {
     font-family: 'Georgia', sans-serif;
     font-size: 25px;
 
 }
+
 .list-item {
     display: flex;
     align-items: center;
-    padding-left: 100px; /* Adjust based on the size of the arrow */
+    padding-left: 100px;
+    /* Adjust based on the size of the arrow */
     list-style: none;
 }
 
 .list-item .fas {
-    margin-right: 10px; /* Adjust the spacing as needed */
-    color: blue; /* Adjust the color as needed */
+    margin-right: 10px;
+    /* Adjust the spacing as needed */
+    color: blue;
+    /* Adjust the color as needed */
 }
+
 .search-container {
     display: flex;
     align-items: center;
@@ -569,7 +621,7 @@ body {
     border-radius: 4px;
     padding: 5px;
     width: 300px;
-    
+
 }
 
 .search-input {
@@ -598,8 +650,8 @@ body {
     justify-content: space-between;
     margin-top: 20px;
 }
-.login-details-container 
-{
+
+.login-details-container {
     background-color: #D9D9D9;
     padding: 20px;
     border-radius: 7px;
@@ -613,7 +665,7 @@ body {
 
 }
 
-.doctor-info-container{
+.doctor-info-container {
     width: 48%;
     background: #f9f9f9;
     padding: 20px;
@@ -660,7 +712,8 @@ body {
     justify-content: center;
 }
 
-.submit-button, .remove-button{
+.submit-button,
+.remove-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -671,8 +724,8 @@ body {
     font-size: 14px;
 
 }
-.cancel-button 
-{
+
+.cancel-button {
     background-color: #15db47;
     color: white;
     border: none;
@@ -682,8 +735,8 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
-.submit-button
-{
+
+.submit-button {
     background-color: #ec160f;
     color: white;
     border: none;
@@ -693,9 +746,9 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
-.generate-password-button
-{
-    background-color:#00000040;
+
+.generate-password-button {
+    background-color: #00000040;
     color: rgb(10, 8, 8);
     border: none;
     padding: 20px 50px;
@@ -714,8 +767,8 @@ body {
 .remove-button {
     background-color: #dc3545;
     justify-content: space-around;
-    border-style:ridge;
-    border-color:#000000;
+    border-style: ridge;
+    border-color: #000000;
     margin-top: 300px;
     padding-left: 60px;
     padding-right: 60px;
@@ -725,19 +778,19 @@ body {
 
 .remove-button i {
     margin-right: 5px;
-    
-    
+
+
 }
-.add-button
-{
+
+.add-button {
     justify-content: space-around;
-  
+
     border-radius: 10px;
     cursor: pointer;
     font-size: 14px;
     background-color: #f9f9f9;
-    border-color:#000000;
-    border-style:ridge;
+    border-color: #000000;
+    border-style: ridge;
     margin-left: 300px;
     margin-top: 300px;
     padding-left: 40px;
@@ -745,21 +798,23 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.add-button:hover
-{
+
+.add-button:hover {
     background-color: #27bfda;
 }
- .remove-button:hover {
+
+.remove-button:hover {
     background-color: #0056b3;
 }
-.cancel-button:hover
-{
+
+.cancel-button:hover {
     background-color: #15db47;
 }
-.submit-button:hover
-{
+
+.submit-button:hover {
     background-color: #c82333;
 }
+
 .remove-button:hover {
     background-color: #c82333;
 }
@@ -811,14 +866,15 @@ body {
     display: flex;
     justify-content: space-around;
 }
-.new-password-display
-{
+
+.new-password-display {
     color: #130d0d;
 }
+
 .back-button {
-    background-color:rgba(30, 69, 84, 0.7);
+    background-color: rgba(30, 69, 84, 0.7);
     color: white;
-    position:absolute;
+    position: absolute;
     bottom: 25px;
     left: 25px;
     padding: 7px 20px;
@@ -826,31 +882,40 @@ body {
     border-style: ridge;
     margin-bottom: -400px;
 }
+
 .input-label {
-    width: 150px; /* Fixed width for the label */
+    width: 150px;
+    /* Fixed width for the label */
     font-weight: bold;
-    margin-right: 10px; /* Space between the label and input field */
-    text-align: left; /* Align text to the right for a clean look */
+    margin-right: 10px;
+    /* Space between the label and input field */
+    text-align: left;
+    /* Align text to the right for a clean look */
     color: #ffffff;
 }
+
 .input-wrapper {
     display: flex;
     align-items: center;
     margin-left: 100px;
-    
+
 }
-.generate-password-button:hover
-{
+
+.generate-password-button:hover {
     background-color: #1c124340;
 }
+
 .red-icon {
-    color: #f44336; /* Red color */
-    font-size: 50px; /* Size of the icon */
-    margin-right: 10px; /* Space between the icon and the heading */
+    color: #f44336;
+    /* Red color */
+    font-size: 50px;
+    /* Size of the icon */
+    margin-right: 10px;
+    /* Space between the icon and the heading */
 }
-.save-button
-{
-    background-color:#D9D9D9;
+
+.save-button {
+    background-color: #D9D9D9;
     color: rgb(10, 8, 8);
     padding: 20px 50px;
     margin: 20px;
@@ -865,6 +930,7 @@ body {
     margin-bottom: 160px;
     padding-bottom: -20px;
 }
+
 .generate-button {
     background-color: rgb(243, 189, 12);
     color: black;
@@ -880,15 +946,14 @@ body {
 }
 
 
-.close-button
-{
+.close-button {
     margin-left: 300px;
     border-radius: 60px;
     border: none;
     size: 5%;
 }
-.close-icon
-{
+
+.close-icon {
     margin: 10px;
     border: none;
 }
@@ -911,78 +976,85 @@ body {
     padding: 20px;
     background-color: #D9D9D9;
     margin: 100px 60px 60px 60px;
-  }
-  
-  .PreInfo {
+}
+
+.PreInfo {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-  }
-  
-  .patientInfo {
+    color: #000000;
+}
+
+
+.patientInfo {
     border: 2px solid black;
     border-radius: 9px;
     padding: 20px;
     width: 85%;
-    color: black; /* Set the text color to black */
-    text-align: left; /* Align the text to the left */
-    background-color: #f0f0f0; /* Optional: Add a subtle background color for contrast */
-  }
-  
-  /* Pre-checking section styling */
-  .pre-checking {
+    color: black;
+    /* Set the text color to black */
+    text-align: left;
+    /* Align the text to the left */
+    background-color: #1e4554a3;
+    /* Optional: Add a subtle background color for contrast */
+}
+
+
+/* Pre-checking section styling */
+.pre-checking {
     background-color: #1e4554a3;
     padding: 60px;
     border-radius: 8px;
     width: 55%;
     margin-left: 160px;
-  }
-  
-  .pre-checking input[type="text"] {
+}
+
+
+.pre-checking input[type="text"] {
     width: 100%;
     height: 50px;
     padding: 10px;
     font-size: 16px;
     box-sizing: border-box;
     margin-bottom: 15px;
-  }
-  
-  .pre-checking label {
+}
+
+.pre-checking label {
     font-weight: 500;
-  }
-  
-  /* Urgency level styling */
-  .urgency-level {
+}
+
+/* Urgency level styling */
+.urgency-level {
     margin-top: 10px;
-  }
-  
-  .urgency-level label {
+}
+
+.urgency-level label {
     font-size: 20px;
-  }
-  
-  .urgency-options {
+}
+
+.urgency-options {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-  }
-  
-  /* Button group styling */
-  .button-group {
+}
+
+/* Button group styling */
+.button-group {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .btn-cancel {
+}
+
+.btn-cancel {
     background-color: #f44336;
-    color: white;
+    color:white;
     padding: 8px 60px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     margin-left: 120px;
-  }
-  
-  .save-btn {
+}
+
+.save-btn {
     background-color: #1E4554;
     color: white;
     padding: 8px 90px;
@@ -990,10 +1062,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-right: 120px;
-  }
-  
-  /* Modal styling */
-  .modal {
+}
+
+/* Modal styling */
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -1003,26 +1075,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-  }
-  
-  /* Enlarge the size of the radio buttons */
-  input[type="radio"] {
+    
+}
+
+.modal-content p{
+    color: #000;
+}
+
+/* Enlarge the size of the radio buttons */
+input[type="radio"] {
     width: 20px;
     height: 20px;
     transform: scale(1.5);
     margin-right: 10px;
     cursor: pointer;
-  }
-  
-  /* Base color for the radio buttons */
-  input[type="radio"] {
+}
+
+/* Base color for the radio buttons */
+input[type="radio"] {
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 50%;
@@ -1031,31 +1108,31 @@ body {
     outline: none;
     cursor: pointer;
     background-color: #f0f0f0;
-  }
-  
-  /* Color when checked */
-  input[type="radio"]:checked#critical {
+}
+
+/* Color when checked */
+input[type="radio"]:checked#critical {
     background-color: red;
     border-color: red;
-  }
-  
-  input[type="radio"]:checked#old {
+}
+
+input[type="radio"]:checked#old {
     background-color: yellow;
     border-color: yellow;
-  }
-  
-  input[type="radio"]:checked#neutral {
+}
+
+input[type="radio"]:checked#neutral {
     background-color: green;
     border-color: green;
-  }
-  
-  /* Style for the labels to match the larger radio buttons */
-  label {
+}
+
+/* Style for the labels to match the larger radio buttons */
+label {
     font-size: 16px;
     margin-right: 15px;
-  }
+}
 
-  .form-group{
+.form-group {
     display: flex;
     flex-direction: column;
     margin: 40px 50px;
@@ -1072,11 +1149,12 @@ input {
 }
 
 /*Registertext + Login text*/
-h1{
+h1 {
     text-align: center;
     color: #fff;
 }
-h3{
+
+h3 {
     text-align: center;
     padding: 20px;
 }
@@ -1210,14 +1288,15 @@ h4 {
     text-align: center;
 }
 
-#header{
+#header {
     width: 103%;
     background-color: rgb(222, 238, 243);
     height: 10vh;
-    flex-wrap: wrap;padding-right: 50px;
+    flex-wrap: wrap;
+    padding-right: 50px;
 }
 
-.nav_button{
+.nav_button {
     margin: 10px 20px;
     color: #1E4554;
     text-decoration: none;
@@ -1239,14 +1318,15 @@ body {
 
 @keyframes slideIn {
     from {
-      transform: translateY(-50px);
-      opacity: 0;
+        transform: translateY(-50px);
+        opacity: 0;
     }
+
     to {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
 .container {
     display: flex;
@@ -1301,27 +1381,32 @@ body {
     font-size: 14px;
 }
 
-.submit-button,.back-button, .close-button{
+.submit-button,
+.back-button,
+.close-button {
     background-color: rgba(30, 69, 84, 0.7);
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Optional: adds rounded corners */
+    border-radius: 5px;
+    /* Optional: adds rounded corners */
     cursor: pointer;
-    font-size: 16px; /* Optional: adjusts font size */
-    transition: background-color 0.3s ease; /* Optional: adds a smooth transition effect */
+    font-size: 16px;
+    /* Optional: adjusts font size */
+    transition: background-color 0.3s ease;
+    /* Optional: adds a smooth transition effect */
 }
 
 /* AddNurse.css */
 
 .reg-button {
-    background-color: #e6af18; 
+    background-color: #e6af18;
     border: #000 solid 1px;
     color: white;
     padding: 10px 60px;
     text-align: center;
     display: inline-block;
-    font-size: 16px; 
+    font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -1335,7 +1420,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px; 
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
@@ -1345,11 +1430,14 @@ body {
 .close-button:hover {
     background-color: #66c6f3;
 }
+
 .nav_button:hover {
     color: #66c6f3;
 }
-.reg-button:hover{
-    background-color: #f88d02; /* Darker green on hover */
+
+.reg-button:hover {
+    background-color: #f88d02;
+    /* Darker green on hover */
 }
 
 .next-button:hover {
@@ -1360,14 +1448,12 @@ body {
     background-color: rgb(202, 16, 81);
 }
 
-.back-button:hover
-{
+.back-button:hover {
     background-color: rgb(202, 16, 81);
 
 }
 
-.title
-{
+.title {
     font-size: 35px;
     margin-bottom: 20px;
     text-align: center;
@@ -1389,11 +1475,13 @@ body {
 
 .button-group {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-top: 20px;
-}                                                                                                                                                                                                                                                                                                
+}
+
 .validation-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white */
     padding: 10px;
     border-radius: 5px;
 }
@@ -1402,18 +1490,27 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .validation-container p {
     display: flex;
     align-items: center;
     margin: 5px 0;
 }
 
-.valid, .invalid {
+.valid,
+.invalid {
     font-size: 16px;
 }
 
 
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
+

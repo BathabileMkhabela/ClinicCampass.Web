@@ -20,6 +20,7 @@ import DocNurseViewLinks from '../admin/components/DocNurseViewLinks'
 import ManageDocNurseLinks from '../admin/components/ManageDocNurseLinks';
 import AddDocNurseLinks from '../admin/components/AddDocNurseLinks';
 
+
 const Navigationbar = ({ toggleButtons }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
@@ -75,6 +76,8 @@ const Navigationbar = ({ toggleButtons }) => {
           return <AddDocNurseLinks />
         case '/regDone':
           return <AddDocNurseLinks />
+          case '/regDone':
+            return <AddDocNurseLinks />
       default:
         return <DefaultLinks toggleButtons={toggleButtons} location={location} />;
     }

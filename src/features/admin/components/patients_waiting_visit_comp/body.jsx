@@ -2,7 +2,8 @@ import H1titleComponent from "../../../components/h1_title_component";
 import "../../../../styles/admin_styles.css"
 import UrgencyLevelComp from "./urgency_level_component";
 import PatientsListTableComp from "./patients_list_table";
-import BackButton from "./back_button_comp"
+import BackButton from "./back_button_comp";
+import BackIconComp from "./back_icon_comp";
 
 export default function BodyComponent(){
     return(
