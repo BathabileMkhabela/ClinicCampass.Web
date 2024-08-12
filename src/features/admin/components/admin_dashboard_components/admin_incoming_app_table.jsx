@@ -15,10 +15,10 @@ export default function IncomingAppointmentsTable(){
                 <th>Appointment Time</th>
                 <th>Action</th>
             </tr>
-            <IncomingAppTableRow actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
-            <IncomingAppTableRow actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
-            <IncomingAppTableRow actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
-            <IncomingAppTableRow actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
+            <IncomingAppTableRow no="01" surname="Malatji" name="Cindi" cellnum="08778965874" appointmentDate="25/09/2024" appointmentTime="15:30PM" actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
+            <IncomingAppTableRow no="02" surname="Manamela" name="Lethabo" cellnum="06778987874" appointmentDate="22/09/2024" appointmentTime="13:30PM" actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
+            <IncomingAppTableRow no="03" surname="Thabang" name="Thabo" cellnum="07878965114" appointmentDate="27/09/2024" appointmentTime="17:30PM" actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
+            <IncomingAppTableRow no="04" surname="Seleka" name="Mpho" cellnum="06854877481" appointmentDate="16/09/2024" appointmentTime="20:30PM" actionBtn={<PreCheckButtonComp navigate={()=>navigate('/Pre-checkup')}/>}/>
                 
            
 
