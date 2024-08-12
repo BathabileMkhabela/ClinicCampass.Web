@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import 'react-toastify/dist/ReactToastify.css';
 
 function ResetPassword() {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();  // Initialize useNavigate
 
   const handleReset = () => {
     // Implement the reset password logic here
     toast.success('Password reset link has been sent to your email.');
+  };
+
+  const handleBack = () => {
+    navigate('/login');  // Navigate to the login page or previous page
   };
 
   return (
@@ -26,9 +32,13 @@ function ResetPassword() {
         <div className="form-group4">
           <button className="reset-button1" onClick={handleReset}>Send Reset Link</button>
         </div>
+        <div className="form-group4">
+          <button className="back-button" onClick={handleBack}>Back</button>
+        </div>
       </div>
     </div>
   );
 }
 
 export default ResetPassword;
+

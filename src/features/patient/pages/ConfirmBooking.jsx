@@ -8,7 +8,7 @@ function ConfirmBooking() {
 
     const handleClose = () => {
        
-        navigate('/');
+        navigate('/booking');
     };
 
     return (

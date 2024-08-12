@@ -1,6 +1,7 @@
 import React from 'react';
 import './Homepage1.css';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Homepage1 = ({ buttonsVisible }) => {
   const navigate = useNavigate();
@@ -23,11 +24,13 @@ const Homepage1 = ({ buttonsVisible }) => {
           <button onClick={() => navigate('/admin-signin')}>Admin Sign In</button>
         </div>
       </div>
+      
     </div>
   );
 };
 
 export default Homepage1;
+
 
 
 

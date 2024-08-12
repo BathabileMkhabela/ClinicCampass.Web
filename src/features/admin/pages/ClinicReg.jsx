@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './style.css';
+import './AdminStyle.css';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ function ClinicReg() {
 
     function submit() {
         
-        if (password !== 'password') {
+        if (password !== '123456') {
             setError('Incorrect password. Please try again.');
             return;
         }

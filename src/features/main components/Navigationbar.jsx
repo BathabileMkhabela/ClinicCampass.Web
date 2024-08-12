@@ -14,6 +14,11 @@ import SignupLinks from '../patient/components/SignUpLinks';
 import RegisterLinks from '../patient/components/RegisterLinks';
 import AboutLinks from './AboutLinks';
 import DefaultLinks from './DefaultLinks';
+import ResetPasswordLinks from '../admin/components/ResetPasswordLinks';
+import AdminLangPageLinks from '../admin/components/AdminLangPageLinks';
+import DocNurseViewLinks from '../admin/components/DocNurseViewLinks'
+import ManageDocNurseLinks from '../admin/components/ManageDocNurseLinks';
+import AddDocNurseLinks from '../admin/components/AddDocNurseLinks';
 
 const Navigationbar = ({ toggleButtons }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -40,8 +45,10 @@ const Navigationbar = ({ toggleButtons }) => {
             handleSearch={handleSearch} 
           />
         );
-      case '/patienthomepage':
+      case '/search':
         return <PatientHomepageLinks />;
+      case '/confrm-booking':
+        return <PatientHomepageLinks />
       case '/booking':
         return <BookingLinks />;
       case '/patient-signin':
@@ -54,6 +61,20 @@ const Navigationbar = ({ toggleButtons }) => {
         return <RegisterLinks />;
         case '/about':
             return <AboutLinks />;
+        case '/reset-password':
+          return <ResetPasswordLinks />
+        case '/adminlandpage':
+          return <AdminLangPageLinks />
+        case '/docnursinfo':
+          return <DocNurseViewLinks />
+        case '/managenursedoc':
+          return <ManageDocNurseLinks />
+        case '/addnursedoc':
+          return <AddDocNurseLinks />
+        case '/createPassword':
+          return <AddDocNurseLinks />
+        case '/regDone':
+          return <AddDocNurseLinks />
       default:
         return <DefaultLinks toggleButtons={toggleButtons} location={location} />;
     }

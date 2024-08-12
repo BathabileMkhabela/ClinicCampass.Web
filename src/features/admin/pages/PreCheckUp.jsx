@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PreCheckUp.css"; // Create a separate CSS file for styling
+import "./AdminStyle.css"; // Create a separate CSS file for styling
 
 const PreCheckup = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,10 +21,10 @@ const PreCheckup = () => {
           <div className="patientInfo">
             <h3>Patient's Information</h3>
             <div className="patient-info-content">
-              <p>Queue No: 01</p>
-              <p>Name: Mpho</p>
-              <p>Surname: Mabusela</p>
-              <p>ID: 8803245945087</p>
+              <p>Queue No: 01</p><br />
+              <p>Name: Mpho</p><br />
+              <p>Surname: Mabusela</p><br />
+              <p>ID: 8803245945087</p><br />
               <p>Appointment Date Time: 28/08/24 14:18 PM</p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const PreCheckup = () => {
 
         <div className="button-group">
           <button className="btn-cancel" onClick={handleCancelClick}>
-            Cancel appointment
+            Cancel <br /> appointment
           </button>
           <button className="save-btn">Save</button>
         </div>

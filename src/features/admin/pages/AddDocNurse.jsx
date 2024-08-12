@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './style.css';
+import './AdminStyle.css';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -63,6 +63,11 @@ function AddNurse() {
             // Proceed to the next page
             navigate('/createPassword');
         }
+    }
+
+    function back(){
+        navigate('/backtoadd');
+
     }
 
     return (
@@ -205,7 +210,7 @@ function AddNurse() {
                 <button onClick={submit} className='reg-button'>Register</button>
             </div>
             <div>
-                <button className='back-button'>Back</button>
+                <button onClick={back} className='back-button'>Back</button>
             </div>
         </div>
     );

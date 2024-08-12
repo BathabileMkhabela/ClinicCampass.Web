@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate
-import "./AdminLandPage.css";
+import { useNavigate } from "react-router-dom";
+import "./AdminStyle.css";
 
 function AdminLandPage({ patients }) {
   const [rows, setRows] = useState([]);
   const [dateTime, setDateTime] = useState(new Date());
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Combine existing rows with new patients
     setRows((prevRows) => {
-      // Remove duplicates if needed, or simply combine
       const updatedRows = [...prevRows, ...patients];
       return updatedRows;
     });
@@ -26,15 +25,21 @@ function AdminLandPage({ patients }) {
 
   // Handle the action button click for each row
   const handleRowAction = (index) => {
-    // Navigate to the preCheckup page
     navigate("/precheckUp");
   };
 
   // Number of rows to display, adjust as needed
   const totalRows = 10;
 
-  // Fill empty rows if necessary
-  const displayRows = [...rows];
+  // Ensure only the first row has patient data, the rest are empty
+  const displayRows = [];
+  if (rows.length > 0) {
+    displayRows.push(rows[0]); // First row with patient data
+  } else {
+    displayRows.push({ name: "No Data", surname: "", cellNum: "", appointDate: "", appointTime: "", default: true });
+  }
+
+  // Add empty rows if necessary
   while (displayRows.length < totalRows) {
     displayRows.push({ name: "", surname: "", cellNum: "", appointDate: "", appointTime: "" });
   }
@@ -71,14 +76,14 @@ function AdminLandPage({ patients }) {
             {displayRows.map((row, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td>{row.name || "N/A"}</td>
-                <td>{row.surname || "N/A"}</td>
-                <td>{row.cellNum || "N/A"}</td>
-                <td>{row.appointDate || "N/A"}</td>
-                <td>{row.appointTime || "N/A"}</td>
+                <td>{index === 0 ? row.name : ""}</td>
+                <td>{index === 0 ? row.surname : ""}</td>
+                <td>{index === 0 ? row.cellNum : ""}</td>
+                <td>{index === 0 ? row.appointDate : ""}</td>
+                <td>{index === 0 ? row.appointTime : ""}</td>
                 <td>
-                  {row.name && row.surname && row.cellNum && row.appointDate && row.appointTime ? (
-                    <button onClick={() => handleRowAction(index)}>Action</button>
+                  {index === 0 && (row.name && row.surname && row.cellNum && row.appointDate && row.appointTime) ? (
+                    <button onClick={() => handleRowAction(index)}>PreCheckUp</button>
                   ) : (
                     ""
                   )}
@@ -110,7 +115,7 @@ function AdminLandPage({ patients }) {
                 <button onClick={() => window.location.href = "/consultationRoom"} className="button">
                     Patients Waiting for Hospital Transfer
                 </button>
-                <button onClick={() => window.location.href = "/reporting"} className="button">
+                <button onClick={() => window.location.href = "/consultation-room"} className="button">
                     Consultation Room
                 </button>
                 <button onClick={() => window.location.href = "/reporting"} className="button">

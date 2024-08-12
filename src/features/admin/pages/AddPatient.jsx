@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AdminStyle.css"; // Import the CSS file for styling
 
 function AddPatient({ onAddPatient }) {
   const [name, setName] = useState("");
@@ -18,40 +19,45 @@ function AddPatient({ onAddPatient }) {
   };
 
   return (
-    <div>
-      <main>
+    <div className="add-patient-container">
+      <main className="add-patient-form">
         <h2>Adding Patients</h2>
         <input
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          className="input-field"
         />
         <input
           type="text"
           placeholder="Surname"
           value={surname}
           onChange={(e) => setSurname(e.target.value)}
+          className="input-field"
         />
         <input
           type="number"
           placeholder="Cell Number"
           value={cellNum}
           onChange={(e) => setCellNum(e.target.value)}
+          className="input-field"
         />
         <input
           type="date"
           placeholder="Appointment Date"
           value={appointDate}
           onChange={(e) => setAppointDate(e.target.value)}
+          className="input-field"
         />
         <input
           type="time"
           placeholder="Appointment Time"
           value={appointTime}
           onChange={(e) => setAppointTime(e.target.value)}
+          className="input-field"
         />
-        <div>
+        <div className="button-group">
           <button
             onClick={() => navigate("/adminlandpage")}
             className="back-btn"
@@ -60,7 +66,7 @@ function AddPatient({ onAddPatient }) {
           </button>
           <button
             onClick={handleSubmit}
-            className="button"
+            className="submit-btn"
           >
             Submit Patient
           </button>
@@ -71,3 +77,4 @@ function AddPatient({ onAddPatient }) {
 }
 
 export default AddPatient;
+
