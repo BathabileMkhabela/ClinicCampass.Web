@@ -7,6 +7,7 @@ import PatientsWaitingConsultPage from "./features/admin/pages/patients_waiting_
 import ConsultationRoomPage from "./features/admin/pages/consultation_room_page";
 import ViewStaffPage from "./features/admin/pages/view_staff_page";
 import ManageStaffPage from "./features/admin/pages/manage_staff_page";
+import RegisterNewStaffPage from "./features/admin/pages/register_new_stafff_page";
 const App = () => {
   return (
     <Router>
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/consultation-room" element={<ConsultationRoomPage/>}/>
           <Route path="/view-staff" element={<ViewStaffPage/>}/>
           <Route path="/manage-staff" element={<ManageStaffPage/>}/>
+          <Route path="/register-staff" element={<RegisterNewStaffPage/>}/>
         </Routes>
 
     </Router>

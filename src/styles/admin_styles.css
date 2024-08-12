@@ -727,6 +727,30 @@ h1{
  font-size: var(--button-fontsize);
  font-size: var(--button-fontWeight);
 }
-.Login_title{
-
+.select_clinic_dropdownField{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
 }
+.select_clinic_dropdownField select{
+    width: 250px;
+    height: 35px;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+}
+.select_clinic_dropdownField label{
+    text-align: center;
+    color: var(--white-color);
+    font-size: var(--sub-title-fontSize);
+    font-weight: var(--sub-title-fontWeight);
+}
+.staff_register_container{
+    background-color: var(--primary-color);
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
