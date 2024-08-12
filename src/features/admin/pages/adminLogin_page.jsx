@@ -14,7 +14,7 @@ export default function AdminLoginPage(){
         if(getAdminAuthStaffNum === String(document.getElementById("staffNumber").value) && getAdminAuthPWD === String(document.getElementById("staffPassword").value)){
            navigate('/Admin-dashboard');
         }else{
-            alert(`${getAdminAuthPWD } ${getAdminAuthStaffNum}`)
+            alert('You have entered a wrong staff number/Password')
         }
     };
     const navigate = useNavigate();
