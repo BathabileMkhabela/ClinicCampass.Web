@@ -702,9 +702,6 @@ h1{
     
  
 }
-.view_staff_backbtn{
-
-}
 .deleteMember_button{
     align-items: center;
     background-color: var(--red-color);
@@ -759,10 +756,12 @@ h1{
 .staff_register_container{
     background-color: var(--primary-color);
     width: 1000px;
-    height: 400px;
+    height: 500px;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
 }
 .top-header{
     display: flex;
@@ -778,10 +777,150 @@ h1{
     font-weight: 100px;
     text-decoration: none;
 }
-.addNewMember_button{
-
-}
 .view_staff_actionbtns{
     display: flex;
     align-items: center;
+}
+.register_staff_textField_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.register_staff_textField_container input{
+    width: 250px;
+    height: 35px;
+    border-radius: var(--border-radius);
+}
+.register_staff_textField_container label{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+.staff_register_separatorLine{
+    height: 400px;
+    width: 2px;
+    background-color: var(--white-color);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.select_assignRoom_dropdownField select{
+    width: 250px;
+    height: 35px;
+    border-radius: var(--border-radius);
+    margin-top: 25px;
+   
+}
+.register_new_staffBtn{
+    width: 250px;
+    margin: auto;
+}
+.register_new_staffBtn button{
+    margin: auto;
+    width: 250px;
+    height: 45px;
+    margin-bottom: 50px;
+    align-items: center;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    font-size: var(--button-fontsize);
+    font-weight: var(--button-fontWeight);
+    border-radius: var(--border-radius);
+
+}
+.registerStaff_backbtn_container button{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 150px;
+    height: 45px;
+    margin-bottom: 50px;
+    align-items: center;
+    margin-left: 170px;
+    border-radius: var(--border-radius);
+}
+.verification_box_container{
+    background-color: var(--white-color);
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    border-radius: var(--border-radius);
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.verification_box_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verification_box_container h3{
+    margin-top: 25px;
+}
+.reggister_staff_verifyPageIcon img{
+    width: 65px;
+    height: 65px;
+}
+.OTP_verify_box{
+    margin-top: 25px;
+    width: 400px;
+    height: 65px;
+}
+.otp_box_1{
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--orange-color);
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+}
+.otp_box_2{
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--orange-color);
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+}
+.otp_box_3{
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--orange-color);
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+}
+.otp_box_4{
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--orange-color);
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+}
+.otp_box_5{
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--orange-color);
+    border-radius: var(--border-radius);
+    margin-right: 10px;
+}
+.OTP_verify_box{
+    display: flex;
+    justify-content: center;
+}
+.verify_newSatff_btn{
+    margin-top: 50px;
+}
+.verify_newSatff_btn button{
+    width: 250px;
+    height: 45px;
+    align-items: center;
+    background-color: var(--orange-color);
+    border-radius: var(--border-radius);
+    color: var(--white-color);
+    font-size: var(--button-fontsize);
+    font-weight: var(--button-fontWeight);
+}
+.resend_verify_codeText_container{
+    margin-top: 25px;
+}
+.resend_verify_codeText_container span{
+    color: var(--orange-color);
+}
+.resend_verify_codeText_container p{
+   font-size: var(--p-fontSize); 
 }

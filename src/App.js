@@ -8,6 +8,7 @@ import ConsultationRoomPage from "./features/admin/pages/consultation_room_page"
 import ViewStaffPage from "./features/admin/pages/view_staff_page";
 import ManageStaffPage from "./features/admin/pages/manage_staff_page";
 import RegisterNewStaffPage from "./features/admin/pages/register_new_stafff_page";
+import StaffRegisterVerificationPage from "./features/admin/pages/staffRegister_verification_page";
 const App = () => {
   return (
     <Router>
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/view-staff" element={<ViewStaffPage/>}/>
           <Route path="/manage-staff" element={<ManageStaffPage/>}/>
           <Route path="/register-staff" element={<RegisterNewStaffPage/>}/>
+          <Route path="/register-verification" element={<StaffRegisterVerificationPage/>}/>
         </Routes>
 
     </Router>
