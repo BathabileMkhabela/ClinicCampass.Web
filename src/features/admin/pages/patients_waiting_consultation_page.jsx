@@ -9,6 +9,7 @@ import useOpenCloseDialogStore from "../../states/openDialogStore";
 import ModalConsultRoomContainer from "../components/patients_waiting_visit_comp/modal_components/modal_consultRooms_container";
 import ModalCancelAppmntBtnComp from "../components/pre-check_components/modal_components/modal_cancel_appmnt_btn";
 import ModalAdminAuthPWDBodyComp from "../components/pre-check_components/modal_components/modal_adminAuthPWD_body";
+import NavLink from "../../components/nav_link";
 export default function PatientsWaitingConsultPage(){
     function ModalType({modalTypeNUmber}){
         if(modalTypeNUmber === 3){
@@ -21,7 +22,7 @@ export default function PatientsWaitingConsultPage(){
      const modalTypeNumber = useOpenCloseDialogStore((state)=> state.modalNumber);
     return (
        <div className="patientsListPage"> 
-        <TopHomeHeader/>
+        <TopHomeHeader navlink={<NavLink linkName={"Dashboard"} className={"nav_link_highlight"}/>}/>
         <BodyComponent/>
         <ModalType modalTypeNUmber={modalTypeNumber}/>
        </div>

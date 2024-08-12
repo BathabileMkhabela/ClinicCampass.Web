@@ -474,6 +474,9 @@ input#urgencyLevel1.urg_lvl_inline{
 h1{
     color: var(--white-color);
 }
+.addNewMember_button{
+
+}
 .patientList_acion_row_btns_container{
     display: flex;
     align-items: center;
@@ -535,7 +538,7 @@ h1{
 .pre-check_row_actionBtn{
     padding: 5px;
 }
-.view_staff_backbtn_container button{
+.view_staff_backbtn{
     width: 150px;
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
@@ -691,8 +694,16 @@ h1{
     color: black;
     font-size: var(--button-fontsize);
     font-weight: var(--button-fontWeight);
+    background-color: var(--box-color);
+    height: 45px;
+    margin-right: 56px;
+    margin-top: 25px;
+    
     
  
+}
+.view_staff_backbtn{
+
 }
 .deleteMember_button{
     align-items: center;
@@ -753,4 +764,24 @@ h1{
     margin-top: 25px;
     margin-bottom: 25px;
 }
+.top-header{
+    display: flex;
+    align-items: center;
+}
+.nav_links_container{
+    margin-left: auto;
+    margin-right: 150px;
+}
+.nav_link_highlight a{
+    color: black;
+    font-size: 19px;
+    font-weight: 100px;
+    text-decoration: none;
+}
+.addNewMember_button{
 
+}
+.view_staff_actionbtns{
+    display: flex;
+    align-items: center;
+}

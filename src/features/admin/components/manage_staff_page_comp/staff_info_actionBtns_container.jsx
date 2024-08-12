@@ -10,7 +10,7 @@ export default function StaffInfoActionBtns(){
     return(
         <div className="staff_info_actionBtns">
             <button type="button" className="deleteMember_button" onClick={setRemoveStaff}><img src={deleteIcon} alt="" className="deleteIcon"/>Remove member</button>
-            <button type="button" className="addNewMember_button" onClick={()=>navigate('/register-staff')}><img src={addNewMemberIcon} alt="" className="addNewMemberIcon"/>Add new Doctor/Nurse</button>
+            
         </div>
     );
 }
