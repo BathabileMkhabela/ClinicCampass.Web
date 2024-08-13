@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./AdminStyle.css"
+import '../../../styles/admin_styles.css';
 const DoctorNurseView = () => {
   const navigate = useNavigate(); // Initialize the navigate function
 

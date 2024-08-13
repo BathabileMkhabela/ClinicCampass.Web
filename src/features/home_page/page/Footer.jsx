@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../../../assets/admin_assets/images/c_logo.svg';
+import logo from '../../../assets/admin_assets/icons/c_logo.svg';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import './Homepage1.css'; // Add the CSS file for custom styling
+import '../../../styles/homepage_styles.css'; // Add the CSS file for custom styling
 
 function Footer() {
   return (

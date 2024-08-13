@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Bookingform.css';
-import doctorImage from '../../../assets/admin_assets/images/doctorImage.jpeg';
+import doctorImage from '../../../assets/patient_assets/images/booking.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from 'emailjs-com';
@@ -8,6 +7,7 @@ import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaPhone, FaEnvelope, FaCalendarAlt, FaStethoscope, FaClock } from 'react-icons/fa';
+import '../../../styles/patient_style.css'
 
 const doctors = ["Dr. Smith", "Dr. Johnson", "Dr. Williams"];
 

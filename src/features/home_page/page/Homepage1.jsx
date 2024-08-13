@@ -1,5 +1,5 @@
 import React from 'react';
-import './Homepage1.css';
+import '../../../styles/homepage_styles.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 
@@ -9,7 +9,7 @@ const Homepage1 = ({ buttonsVisible }) => {
   return (
     <div className="home">
       <video autoPlay muted loop className="background-video">
-        <source src={require('./BackgroundVideo.mp4')} type="video/mp4" />
+        <source src={require('../../../assets/BackgroundVideo.mp4')} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="overlay">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AdminStyle.css"; // Create a separate CSS file for styling
+import '../../../styles/admin_styles.css'; // Create a separate CSS file for styling
 
 const PreCheckup = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

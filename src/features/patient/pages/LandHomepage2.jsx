@@ -1,5 +1,4 @@
 import React from "react";
-import './LandHomepage2.css';
 
 const LandHomepage2 = () => {
     return (

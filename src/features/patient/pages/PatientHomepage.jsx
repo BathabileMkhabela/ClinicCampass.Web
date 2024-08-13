@@ -2,8 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './PatientHomepage.css';
-import backgroundImage from '../../../assets/admin_assets/images/Background.jpg'; // Update path as needed
+import backgroundImage from '../../../assets/Background.jpg'; // Update path as needed
 
 const doctors = [
     {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './AdminStyle.css';
+import '../../../styles/admin_styles.css';
 import { useNavigate } from 'react-router-dom';
 
 function RegDone() {

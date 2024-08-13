@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import './AdminStyle.css'; // Ensure this file exists for custom styles
+import '../../../styles/admin_styles.css'; // Ensure this file exists for custom styles
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 import { useNavigate } from 'react-router-dom';
 
