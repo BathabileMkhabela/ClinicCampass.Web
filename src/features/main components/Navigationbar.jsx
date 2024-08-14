@@ -4,21 +4,18 @@ import '../../styles/navigationbar.css';
 import logo from '../../assets/admin_assets/images/Health_Icon.webp';
 
 
-import HomeLinks from '../home_page/components/HomeLinks';
+
 import LandHomepage2Links from '../patient/components/LandHomepage2Links';
 import PatientHomepageLinks from '../patient/components/PatientHomepageLinks';
 import BookingLinks from '../patient/components/BookingLinks';
 import PatientSignInLinks from '../patient/components/PatientSignInLinks';
-import AdminSignInLinks from '../admin/components/AdminSignInLinks';
 import SignupLinks from '../patient/components/SignUpLinks';
 import RegisterLinks from '../patient/components/RegisterLinks';
-import AboutLinks from './AboutLinks';
-import DefaultLinks from './DefaultLinks';
-import ResetPasswordLinks from '../admin/components/ResetPasswordLinks';
-import AdminLangPageLinks from '../admin/components/AdminLangPageLinks';
-import DocNurseViewLinks from '../admin/components/DocNurseViewLinks'
-import ManageDocNurseLinks from '../admin/components/ManageDocNurseLinks';
-import AddDocNurseLinks from '../admin/components/AddDocNurseLinks';
+import AboutLinks from '../components/TopTwo2HeaderLinks';
+import DefaultLinks from '../components/DefaultLinks';
+import TopFourHeaderLinks from '../components/TopFourHeaderLinks';
+import TopTwoHeaderLinks from '../components/TopTwoHeaderLinks';
+import TopThreeHeaderLinks from '../components/TopThreeHeaderLinks';
 
 
 const Navigationbar = ({ toggleButtons }) => {
@@ -37,7 +34,7 @@ const Navigationbar = ({ toggleButtons }) => {
   const renderLinks = () => {
     switch (location.pathname) {
       case '/home':
-        return <HomeLinks toggleButtons={toggleButtons} location={location} />;
+        return <DefaultLinks toggleButtons={toggleButtons} location={location} />;
       case '/landhomepage2':
         return (
           <LandHomepage2Links 
@@ -55,7 +52,7 @@ const Navigationbar = ({ toggleButtons }) => {
       case '/patient-signin':
         return <PatientSignInLinks />;
       case '/admin-signin':
-        return <AdminSignInLinks />;
+        return <TopTwoHeaderLinks />;
       case '/signup':
         return <SignupLinks />;
       case '/register':
@@ -63,21 +60,21 @@ const Navigationbar = ({ toggleButtons }) => {
         case '/about':
             return <AboutLinks />;
         case '/reset-password':
-          return <ResetPasswordLinks />
+          return <TopTwoHeaderLinks />
         case '/adminlandpage':
-          return <AdminLangPageLinks />
+          return <TopThreeHeaderLinks />
         case '/docnursinfo':
-          return <DocNurseViewLinks />
+          return <TopFourHeaderLinks />
         case '/managenursedoc':
-          return <ManageDocNurseLinks />
+          return <TopFourHeaderLinks />
         case '/addnursedoc':
-          return <AddDocNurseLinks />
+          return <TopFourHeaderLinks />
         case '/createPassword':
-          return <AddDocNurseLinks />
+          return <TopFourHeaderLinks />
         case '/regDone':
-          return <AddDocNurseLinks />
+          return <TopFourHeaderLinks />
           case '/regDone':
-            return <AddDocNurseLinks />
+            return <TopFourHeaderLinks />
       default:
         return <DefaultLinks toggleButtons={toggleButtons} location={location} />;
     }

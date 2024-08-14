@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../../styles/admin_styles.css';
 import { Header } from "../../admin/components/admin_lang_page_components/Header";
-/*import { AppointmentsTable } from '../../admin/components/admin_land_page_components/AppointmentsTable';*/
+import { AppointmentsTable } from  '../../admin/components/admin_lang_page_components/AppointmentsTable'
 import { ButtonsContainer } from "../../admin/components/admin_lang_page_components/ButtonsContainer";
 
 function AdminLandPage({ patients }) {
@@ -48,7 +48,7 @@ function AdminLandPage({ patients }) {
       <Header dateTime={dateTime} />
       <main>
         <h2>Incoming Appointments</h2>
-        {/* <AppointmentsTable displayRows={displayRows} handleRowAction={handleRowAction} /> */}
+        { <AppointmentsTable displayRows={displayRows} handleRowAction={handleRowAction} /> }
         <div className="total-appointments">
           Total Appointments: {rows.length}
         </div>
