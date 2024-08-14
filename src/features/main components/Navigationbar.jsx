@@ -2,20 +2,13 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../../styles/navigationbar.css';
 import logo from '../../assets/admin_assets/images/Health_Icon.webp';
-
-
-
-import LandHomepage2Links from '../patient/components/LandHomepage2Links';
-import PatientHomepageLinks from '../patient/components/PatientHomepageLinks';
-import BookingLinks from '../patient/components/BookingLinks';
-import PatientSignInLinks from '../patient/components/PatientSignInLinks';
-import SignupLinks from '../patient/components/SignUpLinks';
-import RegisterLinks from '../patient/components/RegisterLinks';
+import LandHomepage2Links from './LandHomepage2Links';
 import AboutLinks from '../components/TopTwo2HeaderLinks';
 import DefaultLinks from '../components/DefaultLinks';
 import TopFourHeaderLinks from '../components/TopFourHeaderLinks';
 import TopTwoHeaderLinks from '../components/TopTwoHeaderLinks';
 import TopThreeHeaderLinks from '../components/TopThreeHeaderLinks';
+import TopThree2HeaderLinks from '../components/TopThree2HeaderLinks'
 
 
 const Navigationbar = ({ toggleButtons }) => {
@@ -44,19 +37,19 @@ const Navigationbar = ({ toggleButtons }) => {
           />
         );
       case '/search':
-        return <PatientHomepageLinks />;
+        return <TopThree2HeaderLinks />;
       case '/confrm-booking':
-        return <PatientHomepageLinks />
+        return <TopThree2HeaderLinks />
       case '/booking':
-        return <BookingLinks />;
+        return <TopThree2HeaderLinks />;
       case '/patient-signin':
-        return <PatientSignInLinks />;
+        return <TopTwoHeaderLinks />;
       case '/admin-signin':
         return <TopTwoHeaderLinks />;
       case '/signup':
-        return <SignupLinks />;
+        return <TopTwoHeaderLinks />;
       case '/register':
-        return <RegisterLinks />;
+        return <TopTwoHeaderLinks />;
         case '/about':
             return <AboutLinks />;
         case '/reset-password':

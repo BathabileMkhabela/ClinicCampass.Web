@@ -1,10 +1,6 @@
-// AdminLandPage.js
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import '../../../styles/admin_styles.css';
-import { Header } from "../../admin/components/admin_lang_page_components/Header";
-import { AppointmentsTable } from  '../../admin/components/admin_lang_page_components/AppointmentsTable'
-import { ButtonsContainer } from "../../admin/components/admin_lang_page_components/ButtonsContainer";
+import '../../../styles/admin_styles.css'; // Import the CSS file for styling
 
 function AdminLandPage({ patients }) {
   const [rows, setRows] = useState([]);
@@ -45,14 +41,84 @@ function AdminLandPage({ patients }) {
 
   return (
     <div>
-      <Header dateTime={dateTime} />
+      <header>
+        <div className="adminInfo">
+          <div className="clinicInfo">
+            <p>KwaMhlanga Clinic</p>
+            <p><span className="admin-name">Admin:</span> Lebo Sethole</p>
+          </div>
+          <div className="dateTime">
+            <p>{dateTime.toLocaleDateString()} {dateTime.toLocaleTimeString()}</p>
+          </div>
+        </div>
+      </header>
       <main>
         <h2>Incoming Appointments</h2>
-        { <AppointmentsTable displayRows={displayRows} handleRowAction={handleRowAction} /> }
+        <table>
+          <thead>
+            <tr>
+              <th>NO</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Cell Number</th>
+              <th>Appointment Date</th>
+              <th>Appointment Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {displayRows.map((row, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{index === 0 ? row.name : ""}</td>
+                <td>{index === 0 ? row.surname : ""}</td>
+                <td>{index === 0 ? row.cellNum : ""}</td>
+                <td>{index === 0 ? row.appointDate : ""}</td>
+                <td>{index === 0 ? row.appointTime : ""}</td>
+                <td>
+                  {index === 0 && (row.name && row.surname && row.cellNum && row.appointDate && row.appointTime) ? (
+                    <button onClick={() => handleRowAction(index)}>PreCheckUp</button>
+                  ) : (
+                    ""
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <div className="total-appointments">
           Total Appointments: {rows.length}
         </div>
-        <ButtonsContainer />
+        <div className="buttons-container">
+          <button onClick={() => window.location.href = "/logout"} className="logout-btn">
+            <span className="icon">🔒</span> Logout
+          </button>
+          <div className="button-row">
+            <button onClick={() => window.location.href = "/patientlist"} className="button">
+              Patients Waiting for Consultation
+            </button>
+            <button onClick={() => window.location.href = "/precheckUp"} className="button">
+              Patient Waiting for Medication   
+            </button>
+            <button onClick={() => window.location.href = "/docnursinfo"} className="button">
+              View Nurse/Doctor
+            </button>
+          </div>
+          <div className="button-row">
+            <button onClick={() => window.location.href = "/consultationRoom"} className="button">
+              Patients Waiting for Hospital Transfer
+            </button>
+            <button onClick={() => window.location.href = "/consultation-room"} className="button">
+              Consultation Room
+            </button>
+            <button onClick={() => window.location.href = "/reporting"} className="button">
+              Reporting
+            </button>
+          </div>
+          <button onClick={() => window.location.href = "/addpatient"} className="add-patient-btn">
+            Add Patients
+          </button>
+        </div>
       </main>
     </div>
   );
