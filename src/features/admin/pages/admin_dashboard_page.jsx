@@ -17,12 +17,15 @@ export default function AdminDashboardPage(){
             <div className="dashboard_btns_firstRow">
             <DashboardNavButton label={"Patients waiting for consultation"} navigate={()=>navigate('/patients-list')}/>
             <DashboardNavButton label={"Patients waiting for hospital transfer"}/>
-            <DashboardNavButton label={"View Nurse/Doctor"}/>
+            <DashboardNavButton label={"View Nurse/Doctor"} navigate={()=>navigate('/view-staff')}/>
             </div>
          <div className="dashboard_btns_secondRow">
             <DashboardNavButton label={"Patients waiting for medical results"}/>
             <DashboardNavButton label={"Consultation Room"} navigate={()=>navigate('/consultation-room')}/>
             <DashboardNavButton label={"Reporting"}/>
+        </div>
+        <div className="dashboard_btns_thirdRow">
+            <DashboardNavButton label={"Add Patient"} navigate={()=>navigate('/add-patient')}/>
         </div>
         </div>
         <LogOutButton/>

@@ -8,7 +8,7 @@ export default function IncomingAppTableRow({no="",name="",surname="",cellnum=""
                  <td>{cellnum}</td>
                  <td>{appointmentDate}</td>
                  <td>{appointmentTime}</td>
-                 <td>{actionBtn}</td>
+                 
             </tr>
     );
 }

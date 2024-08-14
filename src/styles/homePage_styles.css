@@ -1,4 +1,4 @@
-.home_title{
+/* .home_title{
     width: 1020px;
     margin: auto;
    
@@ -28,4 +28,153 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 150px;
-}
+} */
+
+/* Homepage1.css */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.103);
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    padding: 20px;
+  }
+  
+  .welcome-message {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+  }
+  
+  .welcome-message h1 {
+    font-size:  2.875rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .welcome-message p {
+    font-size: 1.5rem;
+    color: #d4e6f1; /* Light blue color for better contrast */
+  }
+  
+  .sign-in-buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    animation: slideIn 0.5s ease-in-out;
+    position: absolute;
+    top: 45%;
+  }
+  
+  .sign-in-buttons.visible {
+    display: flex;
+  }
+  
+  .sign-in-buttons button {
+    margin: 18px;
+    padding: 18px 40px;
+    font-size: 1.20rem;
+    color: #000000;
+    background: #a7d5db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sign-in-buttons button:hover {
+    background: #06f7ff;
+    transform: scale(1.05);
+  }
+  
+  .sign-in-buttons button:active {
+    transform: scale(0.95);
+  }
+  
+  .additional-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #d4e6f1;
+    animation: fadeIn 2s ease-in-out;
+    position: absolute;
+    bottom: 10%;
+  }
+  
+  .next-button {
+    margin-top: auto;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 2%;
+  }
+  
+  .next-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .next-button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
