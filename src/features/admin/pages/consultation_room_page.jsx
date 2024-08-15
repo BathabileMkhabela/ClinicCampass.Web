@@ -4,7 +4,7 @@ import NavLink from "../../components/nav_link";
 export default function ConsultationRoomPage(){
     return(
     <>
-        <TopHomeHeader navlink={<NavLink  className={"nav_link_highlight"} linkName={"Dashboard"}/>}/>
+        {/* <TopHomeHeader navlink={<NavLink  className={"nav_link_highlight"} linkName={"Dashboard"}/>}/> */}
         <ConsultationRoomBody/>
     </>
     );

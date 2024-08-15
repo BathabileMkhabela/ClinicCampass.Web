@@ -3,8 +3,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import '../../../styles/patient_style.css'; // Ensure this file exists for custom styles
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
+import { useNavigate } from 'react-router-dom';
 
 const ManageStaff = () => {
+    const navigate = useNavigate();
     const [doctorInfo, setDoctorInfo] = useState({
         name: "",
         surname: "",
@@ -95,19 +97,19 @@ const ManageStaff = () => {
         }
     };
 
-    const addNewDoctor = () => {
-        toast.info("Add new doctor/nurse");
-        
-    };
-
     const goBack = () => {
-        
         console.log("Back button clicked");
+        navigate('/view-staff')
     };
 
     return (
         <div className="container">
-            
+            {/* Heading Section */}
+            <div className="heading-section">
+                <h2>Manage Doctor/Nurse</h2>
+                <p>Practice Number: 123456</p> {/* Replace with the actual practice number */}
+            </div>
+
             <div className="content">
                 <div className="doctor-info-container">
                     <h4 className="title-doctor">Doctor's Information</h4>
@@ -209,7 +211,6 @@ const ManageStaff = () => {
                 <button type="button" onClick={confirmRemoveDoctor} className="remove-button">
                     <i className="fas fa-trash-alt"></i> Remove Doctor
                 </button>
-                <button type="button" onClick={addNewDoctor} className="add-button"><img src={require('../../../assets/admin_assets/images/add_new_staff_icon.png')} alt="Cancel" className="close-icon" height={17}/>Add New Doctor/Nurse</button>
                 <button type="button" onClick={goBack} className="back-button">
                     <i className="fas fa-arrow-left"></i> Back
                 </button>
@@ -217,8 +218,7 @@ const ManageStaff = () => {
             {showConfirmationDialog && (
                 <div className="dialog-overlay">
                     <div className="dialog-content">
-                    <img src={require('../../../assets/admin_assets/images/remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={50}/>  
-                    
+                        <img src={require('../../../assets/admin_assets/images/remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={50}/>  
                         <h4>Are you sure you want to remove the doctor?</h4>
                         <div className="button-group">
                             <button type="button" onClick={handleConfirmRemove} className="submit-button">Yes</button>
@@ -231,12 +231,12 @@ const ManageStaff = () => {
                 <div className="dialog-overlay">
                     <div className="dialog-content">
                         <button className="close-button" onClick={() => setShowAdminPasswordDialog(false)}>
-                        <img src={require('../../../assets/admin_assets/images/cancel_dialog_button.png')} alt="Cancel" className="close-icon" height={30}/>
+                            <img src={require('../../../assets/admin_assets/images/cancel_dialog_button.png')} alt="Cancel" className="close-icon" height={30}/>
                         </button>
                         {dialogAction === "generate" ? (
                             <>
                                 <img src={require('../../../assets/admin_assets/images/admin_shield_icon.png')} alt="Cancel" className="close-icon" height={40}/>
-                                <h4> Provide Admin Password</h4>
+                                <h4>Provide Admin Password</h4>
                                 <div className="input-group">
                                     <label>Admin Password:</label>
                                     <input
@@ -247,13 +247,13 @@ const ManageStaff = () => {
                                     />
                                 </div>
                                 <div className="button-group">
-                                    <button type="button" onClick={generateNewPassword} className="generate-button">Generate</button>
+                                    <button type="button" onClick={generateNewPassword} className="submit-button">Submit</button>
                                 </div>
                             </>
                         ) : (
                             <>
-                                <img src={require('../../../assets/admin_assets/images/remove_staff_dialog_icon.png')} alt="Cancel" className="close-icon" height={40}/>
-                                <h4>Provide admin password to remove Doctor</h4>
+                                <img src={require('../../../assets/admin_assets/images/admin_shield_icon.png')} alt="Cancel" className="close-icon" height={40}/>
+                                <h4>Enter Admin Password to Confirm</h4>
                                 <div className="input-group">
                                     <label>Admin Password:</label>
                                     <input
@@ -264,14 +264,14 @@ const ManageStaff = () => {
                                     />
                                 </div>
                                 <div className="button-group">
-                                    <button type="button" onClick={removeDoctor} className="submit-button">Remove</button>
+                                    <button type="button" onClick={removeDoctor} className="submit-button">Confirm</button>
                                 </div>
                             </>
                         )}
                     </div>
                 </div>
             )}
-            <ToastContainer />
+            <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} closeOnClick pauseOnHover />
         </div>
     );
 };

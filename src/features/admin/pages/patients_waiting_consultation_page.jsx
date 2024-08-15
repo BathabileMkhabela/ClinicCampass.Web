@@ -22,7 +22,7 @@ export default function PatientsWaitingConsultPage(){
      const modalTypeNumber = useOpenCloseDialogStore((state)=> state.modalNumber);
     return (
        <div className="patientsListPage"> 
-        <TopHomeHeader navlink={<NavLink linkName={"Dashboard"} className={"nav_link_highlight"}/>}/>
+        {/* <TopHomeHeader navlink={<NavLink linkName={"Dashboard"} className={"nav_link_highlight"}/>}/> */}
         <BodyComponent/>
         <ModalType modalTypeNUmber={modalTypeNumber}/>
        </div>

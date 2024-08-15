@@ -3,7 +3,7 @@ import LogoComponent from './logo_comp';
 export default function TopHomeHeader({navlink,navlink2,navlink3,navlink4}){
     return(
         <div class="top-header">
-            <LogoComponent/>
+            {<LogoComponent/>}
             <div className="nav_links_container">
             <nav>
                 <ul>

@@ -1,4 +1,4 @@
-import clinicIcon from "../../../../assets/admin_assets/icons/clinic_welcome_icon.svg";
+import clinicIcon from "../../../../assets/admin_assets/images/clinic_welcome_icon.png";
 export default function StaffVerifIcon(){
     return(
         <div className="reggister_staff_verifyPageIcon">

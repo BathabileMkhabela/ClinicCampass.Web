@@ -924,3 +924,21 @@ h1{
 .resend_verify_codeText_container p{
    font-size: var(--p-fontSize); 
 }
+
+.admin_dashboard_page_container .top_bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.admin_dashboard_page_container .time_date,
+.admin_dashboard_page_container .clinic_admin_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_dashboard_page_container .time_date span,
+.admin_dashboard_page_container .clinic_admin_info span {
+    margin: 2px 0;
+}

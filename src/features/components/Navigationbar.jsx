@@ -42,7 +42,8 @@ const Navigationbar = ({ toggleButtons }) => {
       case "/clinic-landing-page":
       case "/confrm-booking":
       case "/booking":
-      case "/patient-signin":
+      case "/patient-sigin":
+
         return <TopThree2HeaderLinks />;
 
       case "/clinic-landing-page":
@@ -55,14 +56,17 @@ const Navigationbar = ({ toggleButtons }) => {
       case "/about":
         return <AboutLinks />;
 
-      case "/Admin-dashboard":
+       case "/Admin-dashboard":
         return <TopThreeHeaderLinks />;
 
-      case "/docnursinfo":
-      case "/managenursedoc":
+      case "/view-staff":
+      case "/manage-staff":
       case "/addnursedoc":
       case "/createPassword":
       case "/regDone":
+      case "/patients-list":
+      case "/consultation-room":
+      case "/register-verification":
         return <TopFourHeaderLinks />;
 
       default:

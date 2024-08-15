@@ -6,7 +6,7 @@ import ResendVerifyCodeText from "../components/register_staff_components/didnt_
 export default function StaffRegisterVerificationPage(){
     return(
         <div className="staff_register_verify_page_container">
-            <TopHomeHeader/>
+            {/* <TopHomeHeader/> */}
             <div className="verification_box_container">
                 <h3>Registered user to KwaMhlanga Clinic</h3>
                 <div className="staff_veriPage_icon">

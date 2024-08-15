@@ -30,7 +30,7 @@ export default function PreCheckupPage(){
     const modalTypeNumber = useOpenCloseDialogStore((state)=> state.modalNumber);
     return(
         <div className="precheckup_page">
-            <TopHomeHeader/>
+            {/* <TopHomeHeader/> */}
            
             <H1titleComponent title={"Pre-checkup"}/>
       
