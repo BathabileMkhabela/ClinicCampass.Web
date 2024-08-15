@@ -173,21 +173,26 @@ h1{
     background-color: var(--primary-color);
     border-radius: var(--border-radius);
     margin-left: 56px;
-    margin-top: 25px;
+    margin-top: 100px;
     align-items: center;
     height: 45px;
     font-size: var(--button-fontsize);
     font-weight: var(--button-fontWeight);
     color: var(--white-color);
+    text-align:top;
+    
 
 }
 button{
     display: flex;
     justify-content: space-evenly;
+    text-align: center;
 }
 .btn_icon_container img{
     height: 25px;
     width: 25px;
+    margin-right: 120px;
+    margin-top: 1-12px;
 }
 .consTable{
     margin-left: 56px;
