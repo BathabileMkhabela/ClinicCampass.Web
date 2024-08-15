@@ -127,7 +127,10 @@ h1{
     
 }
 .lvl_title{
-    width: 50px;
+    width: 50px;   
+}
+.lvl_title p{
+    margin-right: 20px;  
 }
 .level1_indicator{
     background-color: var(--red-color);
@@ -494,9 +497,21 @@ h1{
 }
 .consult_btn_container button{
     background-color: var(--green-color);
+    text-align:center; /* Center text inside the button */
+    width: 100%; /* Optional: Make sure the button takes up full width */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    padding-bottom: 20px;
+    border: none; /* Optional: Remove border if you want a clean look */
+    color: #fff;
 }
 .cancel_patient_btn_container button{
     background-color: var(--red-color);
+    text-align:center; /* Center text inside the button */
+    width: 100%; /* Optional: Make sure the button takes up full width */
+    padding: 10px; /* Optional: Add padding for better appearance */
+    padding-bottom: 20px;
+    border: none; /* Optional: Remove border if you want a clean look */
+    color: #fff;
 }
 .modal_ConsultRoom_container{
     overflow-y: auto;
@@ -923,22 +938,4 @@ h1{
 }
 .resend_verify_codeText_container p{
    font-size: var(--p-fontSize); 
-}
-
-.admin_dashboard_page_container .top_bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-
-}
-
-.admin_dashboard_page_container .time_date,
-.admin_dashboard_page_container .clinic_admin_info {
-    display: flex;
-    flex-direction: column;
-}
-
-.admin_dashboard_page_container .time_date span,
-.admin_dashboard_page_container .clinic_admin_info span {
-    margin: 2px 0;
 }

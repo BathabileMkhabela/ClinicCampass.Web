@@ -10,6 +10,8 @@ import ModalConsultRoomContainer from "../components/patients_waiting_visit_comp
 import ModalCancelAppmntBtnComp from "../components/pre-check_components/modal_components/modal_cancel_appmnt_btn";
 import ModalAdminAuthPWDBodyComp from "../components/pre-check_components/modal_components/modal_adminAuthPWD_body";
 import NavLink from "../../components/nav_link";
+
+
 export default function PatientsWaitingConsultPage(){
     function ModalType({modalTypeNUmber}){
         if(modalTypeNUmber === 3){
