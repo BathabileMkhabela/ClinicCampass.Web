@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../images/logo.jpg';
-import background from"../images/background.jpg";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 function Footer(){

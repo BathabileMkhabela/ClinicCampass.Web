@@ -33,20 +33,12 @@ function Login() {
   return (
     <div>
       <ToastContainer />
-      {/* <header>
-            <nav>
-                <img src={logo} className="nav_button" alt="logo" height={30}  />
-                <span>ClinicCompass</span>
-                <a href="/">Home</a>
-		        <a href='/register'>Sign Up</a>
-                <a href="/about">About</a>
-            </nav>
-        </header> */}
       <Header />
 
       <main>
         <h2>Login</h2>
         <div className="container">
+
           <div className="form-group">
             <label>Email</label>
             <input
@@ -55,6 +47,7 @@ function Login() {
               className="control-form"
             />
           </div>
+
           <div className="form-group">
             <label>First name</label>
             <input
@@ -63,8 +56,9 @@ function Login() {
               className="control-form"
             />
           </div>
+          
           <div className="form-group">
-            <button onClick={(login) => window.location.href='/mainWelcome' }>Login</button>
+            <button onClick={(login) => window.location.href='/mainWelcome' } className="sign-btn" >Login</button>
           </div>
 
           <div className="form-button-group">

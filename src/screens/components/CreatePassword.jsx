@@ -33,7 +33,7 @@ const CreatePassword = () => {
             <label>Confirm Password</label>
             <input type="password" value={confirmPassword} onChange={handleConfirmPasswordChange} required />
           </div>
-          <button type="submit">Register</button>
+          <button className="button" type="submit">Register</button>
         </form>
       </main>
       <Footer />

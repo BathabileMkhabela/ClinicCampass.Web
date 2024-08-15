@@ -1,8 +1,13 @@
 import logo from "../images/logo.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Dropdown from "react-bootstrap/Dropdown";
+import { NavDropdown } from "react-bootstrap";
+
 
 function Header() {
-  const Login = true;
+  const Login = false;
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
@@ -24,32 +29,45 @@ function Header() {
             <span>ClinicCompass</span>
           </a>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-button">
+            <div className="nav-button">
               <a href="/">Home</a>
-            </li>
+            </div>
+            <div className="nav-button">
+              <a href="/mainWelcome">Dashboard</a>
+            </div>
             {Login ? (
               <>
-                <li className="nav-button">
-                  <a href="/login">Sign Out</a>
-                </li>
+                <div className="nav-button">
+                  <a href="/login">Manage</a>
+                </div>
+                <div className="nav-button">
+                  <a href="/login">Register</a>
+                </div>
+                <div className="/signout">Sign Out</div>
               </>
             ) : (
               <>
-                <li className="nav-button">
+                {/* <li
+                 className="nav-button">
                   <a href="/login">Sign In</a>
-                </li>
-
-                <li className="nav-button">
-                  <a href="/register">Sign Up</a>
-                </li>
+                </li> */}
+                <div className="nav-button">
+                <NavDropdown className="nav-button" title="Sign In">
+                  <Dropdown.Item href="/login">As Patient</Dropdown.Item>
+                  <Dropdown.Item href="/login">As Admin</Dropdown.Item>
+                  <Dropdown.Item href="/login"> As Nurse</Dropdown.Item>
+                  <Dropdown.Item href="/login">As Doctor</Dropdown.Item>
+                </NavDropdown>
+                </div>
+                <div className="nav-button">
+                  <a href="/register">Sign up</a>
+                </div>
               </>
             )}
 
-            <li className="nav-button">
+            <div className="nav-button">
               <a href="/about">About</a>
-            </li>
-
-            <nav title="Sign-In"></nav>
+            </div>
 
             <form className="d-flex" role="search">
               <input

@@ -1,0 +1,747 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px;
+}
+
+/*************************H1 & H2*************************************/
+h1 {
+  margin: 0;
+  font-size: 2.875rem;
+  font-weight: 700;
+  color: white;
+  animation: fadeIn 6s ease-in-out;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  font-style: Bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#header {
+  text-align: center;
+  background-color: #f8f8f8;
+  justify-content: space-between;
+  display: flex;
+  align-items: right;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+
+.nav_button {
+  margin: none;
+}
+
+/*************************BUTTONS***********************************/
+button {
+  font-size: 1rem;
+  font-weight: 700;
+  text-size-adjust: 0.813rem;
+  padding: 10px 20px;
+  color: black;
+  background-color: #dbebee;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.back-btn {
+  background-color: #607d8b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.back-btn:hover {
+  background-color: #bbb;
+}
+
+.btn-cancel {
+  background-color: #fe0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background-color: #bbb;
+}
+
+.sign-btn {
+  background-color: #3156f8;
+  color: white;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sign-btn:hover {
+  background-color: #bbb;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+/*************************PARAGRAPHS*************************************/
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+
+  justify-content: center;
+}
+
+/*************************LISTS*************************************/
+ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+/*************************NAV*************************************/
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10000000px;
+}
+
+/*************************TABLES*************************************/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #607d8b;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/*************************FORMS*************************************/
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Home page css */
+.home {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 50px;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  min-height: 65vh;
+  position: relative;
+  align-content: center;
+  text-align: center;
+}
+
+/* p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #0056b3;
+} */
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*About Page CSS*/
+.about {
+  font-family: Arial, sans-serif;
+}
+
+/* 
+.mission {
+  padding: 20px;
+}
+
+.mission h1 {
+  color: #333;
+}
+  
+.mission p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.mission ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.mission li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.mission-section ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.mission-section ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+} */
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Login Page CSS*/
+.login {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh;
+    min-width: 100%;
+    min-height: 100vh; */
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.submit-button,
+.back-button {
+  background-color: rgba(30, 69, 84, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  cursor: pointer;
+  font-size: 16px; /* Optional: adjusts font size */
+  transition: background-color 0.3s ease; /* Optional: adds a smooth transition effect */
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Create Password page CSS*/
+.create-password {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Register Page CSS*/
+.register {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Footer CSS*/
+.styles {
+  background-color: #1d3b47;
+  color: white;
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Incoming Patients CSS*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #96b3ee;
+  color: rgb(17, 16, 16);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.appointments-container,
+.precheckup-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  /* background-color: ;
+  margin: 100px;
+  height: 250px;
+  font-weight: bold;
+  font-size: 16px;
+  align-items: center; */
+  
+}
+
+.PreInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+.PreInfo p {
+  color: #007bff;
+}
+
+.patientinfo, .pre-checking {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  width: 150%;
+}
+
+.pre-checking {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.urgency-level {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.urgency-level div {
+  display: flex;
+  gap: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*View Doctor and Nurse CSS*/
+.doctor-nurse-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.status {
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.in-progress {
+  background-color: #ff9800;
+}
+
+.available {
+  background-color: #4caf50;
+}
+
+.manage-btn {
+  background-color: #607d8b;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* PatientsList CSS*/
+.patient-list-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.urgency-levels {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.urgency {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.critical {
+  background-color: #f44336;
+  color: white;
+}
+
+.old {
+  background-color: #ffeb3b;
+}
+
+.neutral {
+  background-color: #4caf50;
+  color: white;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}
+
+.consult-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Manage Nurse & Doctor CSS*/
+.manage-doctor-nurse {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/background.jpg"); /* Add your background image here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.doctor-info,
+.login-details {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.back,
+button.add-new {
+  margin-top: 20px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Doctor/Nurse Page CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.register-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.clinic-select,
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.personal-information,
+.contact-details {
+  width: 48%;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+  color: #333;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f59c00;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.register-button:hover {
+  background-color: #e88e00;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Date And Time Page CSS*/
+.adminInfo p {
+  align-items: left;
+  color: rgb(255, 255, 255);
+  justify-content: space-between;
+  
+}
+
+.clinicInfo {
+  float: left;
+}
+
+.date {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: white;
+}

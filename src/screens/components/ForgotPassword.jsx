@@ -20,16 +20,6 @@ const ForgotPassword = () => {
 
   return (
     <div>
-        {/* <header>
-        <nav>
-            <img src={logo} className="nav_button" alt="logo" height={30}  />
-            <span>ClinicCompass</span>
-            <a href="/home">Home</a>
-            <a href="/login">Sign in</a>
-            <a href="/register">Sign Up</a>
-            <a href="/about">About</a>
-         </nav>
-        </header> */}
         <Header />
 
       <main>
@@ -39,7 +29,7 @@ const ForgotPassword = () => {
           Email :
           <input type="email" value={email} onChange={handleEmailChange} required />
         </label>
-        <button type="submit">Reset Password</button>
+        <button className="button" type="submit">Reset Password</button>
       </form>
       {message && <p>{message}</p>}
       </main>
